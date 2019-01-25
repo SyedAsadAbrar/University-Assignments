@@ -1,0 +1,7 @@
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\bin\DbProjectOld.dll.config
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\bin\DbProjectOld.dll
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\bin\DbProjectOld.pdb
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\obj\Debug\DbProjectOld.csprojResolveAssemblyReference.cache
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\obj\Debug\DbProjectOld.csproj.CoreCompileInputs.cache
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\obj\Debug\DbProjectOld.dll
+C:\Users\asad9\OneDrive\Documents\Visual Studio 2017\Projects\DbProjectOld\DbProjectOld\obj\Debug\DbProjectOld.pdb

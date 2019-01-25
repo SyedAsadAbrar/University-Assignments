@@ -1,0 +1,6 @@
+[org 0x0100]
+mov ax, 0x2120
+and ax, 0x1402
+
+mov ax, 0x4c00
+INT 21h

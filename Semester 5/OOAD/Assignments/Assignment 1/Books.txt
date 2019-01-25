@@ -1,0 +1,35 @@
+Object Oriented Design
+Amir Raheem
+1234567890123
+Programming Paradigms
+12
+
+Object Oriented
+Amir Iqbal
+0987654321234
+Programming
+14
+
+Object
+Farooq Ahmed
+9089786756453
+Programming
+2
+
+Harry Potter 1
+JK Rowling
+1213141516171
+Novel
+1
+
+Harry Potter 2
+JK Rowling
+9876543210123
+Novel
+1
+
+Harry Potter 3
+JK Rowling
+1213141516171
+Novel
+1

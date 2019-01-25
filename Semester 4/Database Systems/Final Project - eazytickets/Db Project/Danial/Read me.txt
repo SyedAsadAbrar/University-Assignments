@@ -1,0 +1,49 @@
+1.change database name according to your SQL server settings
+2.add following procedures
+
+--=============================================================================================================
+go
+create proc viewInfo
+@email varchar(30),@fname varchar(20) OUTPUT,@lname varchar(20) OUTPUT,@phone varchar(11) OUTPUT,@city varchar(20) OUTPUT
+as
+begin
+	select @fname=U.FirstName from  [User] U where Email=@email;
+	select @lname=U.LastName from  [User] U where Email=@email;
+	select @phone=U.MobileNo from  [User] U where Email=@email;
+	select @city=U.City from  [User] U where Email=@email;	
+end
+select* from [User]
+--=============================================================================================================
+go
+create proc changePassword
+@email varchar(30),@opass varchar(32),@npass varchar(32),@output int OUTPUT
+as 
+begin
+	set @output=-1;
+	if not exists (select* from [User] U where U.Email=@email)
+	begin
+		print 'no such user found '
+		return
+	end
+	else
+	begin
+		if exists (select* from [User] U where U.Email=@email AND U.Password=@opass)
+		begin
+			update [User]
+			set [Password]=@npass
+			where Email=@email
+
+			set @output=1;
+			return;
+		end
+		else 
+		begin
+			print 'password does not match'
+			set @output=-2;
+			return;
+		end
+	end
+end
+declare @out int;
+exec chanagePassword 'mirza_danial70@yahoo.com','123456','654321',@out OUTPUT
+print @out

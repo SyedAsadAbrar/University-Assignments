@@ -1,0 +1,7 @@
+c:\users\danial\source\repos\Phase4\Phase4\bin\Phase4.dll.config
+c:\users\danial\source\repos\Phase4\Phase4\bin\Phase4.dll
+c:\users\danial\source\repos\Phase4\Phase4\bin\Phase4.pdb
+c:\users\danial\source\repos\Phase4\Phase4\obj\Debug\Phase4.csprojResolveAssemblyReference.cache
+c:\users\danial\source\repos\Phase4\Phase4\obj\Debug\Phase4.csproj.CoreCompileInputs.cache
+c:\users\danial\source\repos\Phase4\Phase4\obj\Debug\Phase4.dll
+c:\users\danial\source\repos\Phase4\Phase4\obj\Debug\Phase4.pdb

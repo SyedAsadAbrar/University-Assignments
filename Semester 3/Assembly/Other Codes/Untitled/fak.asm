@@ -1,0 +1,9 @@
+[org 0x100]
+
+mov ax, 0xb800
+mov es, ax
+
+mov word[es:318], 0x0741
+
+mov ax, 0x4c00
+int 0x21

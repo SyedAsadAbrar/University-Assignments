@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="DbProjectOld.Master1" %>
+
+<!DOCTYPE html>
+
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+        function valueInsert(ID) {
+
+            ID.style.borderColor = "lightgrey";
+
+        }
+    </script>
+    <style>
+        .center_div {
+            display: block;
+            margin: 10% auto;
+            margin-top: 100px;
+            width: 33%;
+        }
+
+        .redBorder {
+            border-color: red;
+        }
+
+
+        .redText {
+            color: red;
+        }
+
+        .greenText {
+            color: green;
+        }
+
+        body {
+            background-image: url("Images/ticket_bg.jpg");
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="body" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+</html>

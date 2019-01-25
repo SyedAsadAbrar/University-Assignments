@@ -1,0 +1,148 @@
+﻿Build started 27-Apr-17 12:16:38 AM.
+     1>Project "C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Homework 5\Homework 5.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Shape.cpp
+         Shape.cpp
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(21): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(22): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(24): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(41): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(42): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(45): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(46): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(54): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(58): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(74): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(75): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(76): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(77): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(80): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(82): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(85): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(88): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(89): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(90): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(91): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(94): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(95): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(98): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(121): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(123): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(125): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(127): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(129): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(131): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(137): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(139): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(145): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(147): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(153): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(155): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(161): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(163): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(169): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(171): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(185): warning C4244: '=' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(186): warning C4244: '=' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(188): warning C4244: '=' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(189): warning C4244: '=' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(196): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(197): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(208): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(209): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(216): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(225): warning C4244: 'initializing' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(226): warning C4244: 'initializing' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(228): warning C4244: 'initializing' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(331): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(332): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(334): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(335): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(342): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(343): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(354): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(355): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(362): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(413): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(417): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(421): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(422): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(425): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(428): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(432): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(435): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(542): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(546): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(550): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(551): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(644): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(648): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(661): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(746): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(750): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(763): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(787): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(788): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(791): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(792): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(813): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(814): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(818): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(819): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(823): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(824): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(828): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(829): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(924): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(928): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(941): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(965): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(966): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(967): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1000): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1010): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1035): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1036): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1094): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1098): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1108): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(912): warning C4715: 'RectangleS::contains' : not all control paths return a value
+     1>c:\users\asad9\desktop\fast\cp\solved\homework 5\homework 5\shape.cpp(1078): warning C4715: 'Text::contains' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Debug\Homework 5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Debug\Homework 5.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Debug\Homework 5.lib" /MACHINE:X86 Debug\GP142.obj
+         Debug\Shape.obj
+         Debug\Source.obj
+         Homework 5.vcxproj -> C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Debug\Homework 5.exe
+     1>Done Building Project "C:\Users\asad9\Desktop\Fast\CP\Solved\Homework 5\Homework 5\Homework 5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.70
