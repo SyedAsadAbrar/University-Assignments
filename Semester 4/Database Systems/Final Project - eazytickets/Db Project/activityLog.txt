@@ -1,7 +1,3 @@
--Some Basic Procedures are updated in procedures_version1.sql  ~Danial (2:19 PM ,4/6/2018)
--Some Order Placement Procedures are updated in procedures_version1.sql  ~Danial (2:22 PM ,4/6/2018)
--Sample.sql added to Abdullah folder with basic structure of insertion queries  ~Danial (3:04 PM ,4/6/2018)
--Editing Schema.sql in my folder to add triggers for each table on deletion and updating, PLEASE DON'T OVERWRITE. ~Asad (6:50 PM, 4/6/2018)
--Final version of phase 3 is uploaded by name Database_Project_Phase_3.sql I have'nt checked Asad's part . ~Danial(9:37 PM,4/8/2018) 
--Phase4 folder uploaded ~Danial(10:46 PM,4/17/2018 )
--Fixed Schema (finally), sorry for the delay family dinner pe gaya howa tha. It's in Fixed Schema folder in my folder, cross check karlay koi please. ~Asad(4:09 AM, 4/29/18)
+version https://git-lfs.github.com/spec/v1
+oid sha256:86ac7ca19fe24c7dac559282359624c79cde275fd4376c8438e15040448430e9
+size 800

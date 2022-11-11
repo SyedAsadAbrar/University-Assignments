@@ -1,6 +1,3 @@
-4
-weighted
-0->(1,1)->(2,3)->(3,1)->
-1->(0,1)->(2,4)->
-2->(1,1)->(3,3)->
-3->(0,8)->(1,1)->(2,1)->
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b239b2998a9f1b9cd7f551a52a559cab0616ba944e9651fc4f80eba0cfa538a
+size 96

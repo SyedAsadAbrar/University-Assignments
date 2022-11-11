@@ -1,1 +1,3 @@
-AN APPLE
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f3d93c8fadc9a3df36c8a7e6da3d1d879fc0e3536e7ae40310641b7b9dd8977
+size 8

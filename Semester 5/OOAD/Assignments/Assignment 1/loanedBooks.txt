@@ -1,5 +1,3 @@
-username
-isbn
-
-username
-isbn
+version https://git-lfs.github.com/spec/v1
+oid sha256:70d761cf2bd1057485b260eb6237618675f686462eb7c3928b2e7c11842f6350
+size 28

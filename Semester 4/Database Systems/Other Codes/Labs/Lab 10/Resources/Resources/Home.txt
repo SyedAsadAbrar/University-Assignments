@@ -1,16 +1,3 @@
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h2>Welcome to Home Page</h2>
-    This is our home page. Please enter your information in the following form. 
-    Name:
-    <br /><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    <br />
-    Student ID:
-    <br /><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-    <br />
-    <asp:Button ID="Button1" runat="server" Text="Save" />
-    <br />
-    
-</asp:Content>
+version https://git-lfs.github.com/spec/v1
+oid sha256:c49b5e2eccea89bb13d9d131835419f126a6bb8c286b0be69786834ed42c96fb
+size 563

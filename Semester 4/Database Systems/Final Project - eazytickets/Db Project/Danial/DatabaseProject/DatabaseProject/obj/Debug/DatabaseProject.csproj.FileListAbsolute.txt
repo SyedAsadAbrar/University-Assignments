@@ -1,7 +1,3 @@
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\bin\DatabaseProject.dll.config
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\bin\DatabaseProject.dll
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\bin\DatabaseProject.pdb
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csprojResolveAssemblyReference.cache
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CoreCompileInputs.cache
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.dll
-C:\Users\Danial\Documents\Visual Studio 2017\Projects\DatabaseProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee5032ba07692556be433713ae7b9328ba2406991e7b77edf940debdb566ad37
+size 861

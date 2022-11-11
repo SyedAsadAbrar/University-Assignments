@@ -1,18 +1,3 @@
- protected void SearchButton_Click(object sender, EventArgs e)
-        {
-            myDAL objmyDAl = new myDAL();
-            String InputName= Name.Text;
-            DataTable DT= new DataTable();
-            int found;
-            found= objmyDAl.SearchStudentByName_DAL(InputName,ref DT);
-            if (found!=1)
-            {
-            Message.Text ="There was some error";
-            }
-            else
-            {
-                Message.Text="Following Students are found";
-                SearchResultGrid.DataSource = DT;
-                SearchResultGrid.DataBind();
-            }            
-        }
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1fe8cc12e98a517e6a49403b38068f0812014248e0fa3e6f51ed395207da031
+size 619
