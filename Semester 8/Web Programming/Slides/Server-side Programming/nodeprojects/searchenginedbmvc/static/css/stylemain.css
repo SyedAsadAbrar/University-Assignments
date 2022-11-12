@@ -1,0 +1,48 @@
+html,body{
+  background:#1de9b6;  
+}
+
+body:before {
+  content: "MY SEARCH";
+  position: fixed;
+  top: 40%;
+  left: 35%;    
+  font-size: 3em;
+  font-weight:bold;
+  font-family:courier;
+  color:black;
+  opacity: 0.65;
+}
+
+form{
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+  
+}
+
+input[type=text]{
+  padding: 12px 12px;  
+  box-sizing: border-box;
+  border: 2px solid #00b686;
+  border-radius: 4px;
+  width:75%;
+}
+
+input[type=submit]{
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  
+  background-color:black;
+  color:#1de9b6;
+  opacity:0.50;
+}

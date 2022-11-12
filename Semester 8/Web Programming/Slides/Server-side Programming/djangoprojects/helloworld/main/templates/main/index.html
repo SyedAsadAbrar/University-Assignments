@@ -1,0 +1,14 @@
+<html>
+<body>
+ Hello
+ {% for name in names %}
+  {% if forloop.first %}
+  {% elif forloop.last %}
+   and
+  {% else %}
+   ,
+  {% endif %}
+  {{name}}
+ {% endfor %}
+</body>
+</html>

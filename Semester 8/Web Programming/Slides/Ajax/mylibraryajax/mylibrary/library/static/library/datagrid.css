@@ -1,0 +1,12 @@
+.grid{
+	width:98%;
+}
+.grid tr th{
+	background-color:gray;		
+	font-weight:bold;
+}
+
+.grid tr td{
+	background-color:white;		
+	border-bottom:solid 1px black;
+}

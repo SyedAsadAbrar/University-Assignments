@@ -1,0 +1,221 @@
+/* 
+---------------------------------------------------
+Reference Colors
+---------------------------------------------------
+   
+
+Main Color:             #325D79 (Dark Blue)
+Secondary Color:        #98D7D1 (Light Blue)
+Base Color:             #EFEEEE (Whitish White)
+Optional Color:         #f18c8e (Kind-of Pink)
+Maybe:                  #33e8a5 (Pixel Lime)
+Hover Color:            #056644 (Pakistan Green)
+
+Black:                  #191919
+Gray:                   gray
+---------------------------------------------------
+*/
+
+/* * {
+    box-sizing: border-box;
+} */
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px whitesmoke inset !important;
+}
+
+input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, input:-webkit-autofill:active, textarea:-webkit-autofill:active, select:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0px 1000px whitesmoke inset !important;
+}
+
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: calc((100vh - 648px) / 2);
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#login_container{
+    background-color: #EFEEEE;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.logo{
+    filter: drop-shadow(0px 2px 0px rgba(245, 245, 245, 1));
+    margin-left: 3px;
+}
+
+div.form-row>input.form-control{
+    background-color:whitesmoke!important;
+    border-radius: 0px;
+    border-style: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    width: 100%;
+}
+
+div.form-row>input.form-control:focus, div.form-row>input.form-control:active{
+    background-color:whitesmoke!important;
+    border-bottom:3px solid #33e8a5;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+div.form-row>input.form-control.invalid{
+    background-color:whitesmoke!important;
+    border-radius: 0px;
+    border-style: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    width: 100%;
+}
+
+div.form-row>input.form-control.invalid:focus, div.form-row>input.form-control.invalid:active{
+    background-color:whitesmoke!important;
+    border-bottom:3px solid red;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+div.form-alert{
+    font-size: 70%;
+    font-weight: bold;
+    display:none;
+    margin-bottom: 8px;
+}
+
+.form-alert.valid{
+    color: #056644;
+}
+
+.form-alert.invalid{
+    color: red;
+}
+
+.toast{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: 5%;
+    margin-top: -4%;
+    z-index: 9999;
+    min-width: 200px;
+    max-width: 350px;
+    width:350px;
+}
+
+.toast-header{
+    color: #056644;
+}
+
+button.btn{
+    background-color: #33e8a5;
+    color:#EFEEEE;
+    border-radius: 0px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn:focus{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.btn:hover{
+    background-color: #056644;
+    color:#EFEEEE;
+}
+
+a{
+    color:gray;
+    text-decoration: underline;
+}
+
+a:hover{
+    color:#056644;
+    text-decoration: underline;
+}
+
+#login_google{
+    background-color:#4285F4;
+}
+
+#login_google:hover{
+    color:#4285F4;
+    background-color: #EFEEEE;
+    border: 1px;
+    border-style: solid;
+}
+
+#login_fb{
+    background-color: #4267B2;
+}
+
+
+#login_fb:hover{
+    color:#4267B2;
+    background-color: #EFEEEE;
+    border: 1px;
+    border-style: solid;
+}
+
+#copyright_text{
+    text-align: center;
+}
+
+/* 
+---------------------------------------------------
+Media Queries
+---------------------------------------------------
+*/
+
+@media (max-height: 648px){
+    #copyright_text{
+        display:none;
+    }
+    .container{
+        margin-top: calc((100vh - 616px) / 2);
+    }
+    #login_container{
+        -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    body{
+        background-color: #EFEEEE;
+    }
+}
+
+@media (max-width:375px){
+    .toast{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: calc((100vw - 350px)/2); 
+        margin-right: calc((100vw - 350px)/2);
+        margin-top: 5%;
+        z-index: 9999;
+        min-width: 200px;
+        max-width: 350px;
+        width:350px;
+    }
+}

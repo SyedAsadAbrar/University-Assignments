@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'main/css/stylesheet.css' %}" >
+		<script type="text/javascript">
+			function setPost(text,id){
+				document.getElementById('ctext').value = text;
+				document.getElementById('cid').value = id;
+			}
+			
+			function reset(){
+				setPost("","");			
+			}
+		</script>
+	</head>
+	<body>
+		<div id="editor">
+			<form method='post' action='{% url "main:save" %}'>
+				{% csrf_token %}
+				<textarea id='ctext' name='comment' ></textarea>
+				<input type='button' value='reset' onclick='reset()'/>
+				<input type='submit' value='post' />
+				<input type='hidden' id='cid' name='id' value='' />
+			</form>
+		</div>
+		<h1> Comments </h1>
+		<ul id='list'>
+			{% for c in comments %}
+			<li><span onclick='setPost("{{c.text}}",{{c.id}})'>{{ c.text }}</span>
+				<span><a href='{% url "main:delete" %}?id={{c.id}}'>X</a></span>
+			</li>
+			{% endfor %}
+		</ul>
+		
+	</body>
+</html>

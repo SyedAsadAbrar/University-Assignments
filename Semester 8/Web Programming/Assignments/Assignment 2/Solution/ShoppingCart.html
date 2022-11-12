@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Shopping Cart - Web Programming Assignment 2 - L164292</title>
+        <link rel="icon" href="cart_icon.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="item.js"></script>
+        <script type="text/javascript" src="cart.js"></script>
+        <script type="text/javascript">
+            var cart = new Cart();
+            var item0 = new Item("Redmi Note 8 Pro", "note8pro.jpg", 300, 1, 0, cart);
+            var item1 = new Item("Nikon D3400", "d3400.jpg", 450, 1, 1, cart);
+            var item2 = new Item("Huawei Nova 7i", "nova7i.jpg", 500, 1, 2, cart);
+            cart.addItem(item0, item0.id);
+            cart.addItem(item1, item1.id);
+            cart.addItem(item2, item2.id);
+            function load(){
+                cart.render('divCart');
+            }
+        </script>
+    </head>
+    <body onload="load()">
+        <div id='divCart'></div>
+    </body>
+</html>

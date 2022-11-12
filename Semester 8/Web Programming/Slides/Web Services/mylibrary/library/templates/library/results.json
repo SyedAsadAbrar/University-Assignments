@@ -1,0 +1,20 @@
+{
+	"metadata":{
+		"columns": ["title","author","isbn"]
+	},
+	"data":{
+		"maxPages": {{maxpages}},
+		"rows": [
+			{% for row in rows %}
+			{
+				"title":"{{row.title}}",
+				"author":"{{row.authors}}",
+				"isbn":"{{row.isbn}}"
+			}
+			{% if not forloop.last %}
+			,
+			{% endif %}
+			{% endfor %}
+		]
+	}
+}

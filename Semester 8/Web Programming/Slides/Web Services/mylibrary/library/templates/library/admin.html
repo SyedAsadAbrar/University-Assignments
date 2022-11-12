@@ -1,0 +1,21 @@
+{% extends "library/template.html" %}
+
+{% block main %} 
+
+<h1>Welcome {{ request.session.user.username}} </h1>
+<br/>
+<h2>Import Catalog</h2>
+
+<form method="POST" action="#" enctype="multipart/form-data">
+ URL
+ <input type="text" name="url" />
+ <input value="Import" type="submit" class="button" />
+</form>
+<br/>
+<h2>Export Catalog</h2>
+<form method="POST" action="#">
+ <input type="hidden" name="action" value="export" /> 
+ <input value="Export" type="submit" class="button" />
+</form>
+
+{% endblock %}	

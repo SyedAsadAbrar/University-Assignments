@@ -1,0 +1,68 @@
+int num1;
+int num2;
+char ch1, ch2;
+jOut("Welcome to test run of java-- compiler.\n\n");
+jOut("Declared two integer variables, num1 and num2 and two char variables ch1 and ch2.\n\n");
+jOut("Enter any integral value (or try any other value to check if the code handles it) \n");
+jIn(num1);
+jOut("You entered: ");
+jOut(num1);
+jOut("\n\n");
+jOut("Enter any character value (or try any other value to check if the code handles it) \n");
+jIn(ch1);
+jOut("You entered: ");
+jOut(ch1);
+jOut("\n");
+num2 <- (num1);
+jOut("\n");
+jOut("Testing arithmetic expression.\nThe result of 1 + 2 * 10 / 2 is ");
+jOut(1 + 2 * 10 / 2);
+jOut("\n\n");
+jOut("Testing condition, if entered number (num1) is greater than 0.");
+jOut("\n");
+if (num1 > 0)
+{
+	jOut("Value of num1 is ");
+	jOut(num1);
+	jOut("\n\n");
+	jOut("Assigning -1 value to num2 to test nested condition.\n");
+	jOut("Testing condition, if num2 is lesser than 0.\n");
+	num2 <- -1;
+	if (num2 < 0){
+		jOut("Value of num2 is ");
+		jOut(num2);
+		jOut("\n");
+	}
+}
+jOut("\n");
+jOut("Testing loop, while entered number (num1) is greater than 0.");
+jOut("\n");
+while (num1 > 0){
+	jOut("Value of num1 is ");
+	jOut(num1);
+	jOut("\n");
+	num1 <- num1 - 1;
+	jOut("Assigning +2 value to num2 to test nested loop.\n");
+	jOut("Testing loop, while num2 is greater than 0.\n");
+	num2 <- 2;
+	while (num2 > 0){
+		jOut("Value of num2 is ");
+		jOut(num2);
+		jOut("\n");
+		num2 <- num2 - 1;
+	}
+	num2 <- 2;
+	jOut("\n");
+}
+jOut("Testing changing value of integer and character variables.");
+jOut("\n");
+ch1 <- 'p';
+jOut("Value of ch1 is ");
+jOut(ch1);
+jOut("\n");
+num1 <- 100;
+jOut("Value of num1 is ");
+jOut(num1);
+jOut("\n\n");
+jOut("End of test code. Thank you!\n");
+jOut("\nNote: This project implements all functionalities (input of integers and characters, output of integers and characters, conditions, loops, arithmetic expressions) including bonus functionalities(nested conditionals & loops, string and character printing) except functions which are only implemented till Translator phase.\nThe first line of procedural code must only be a declaration, otherwise it would be a syntax error.\n\n");

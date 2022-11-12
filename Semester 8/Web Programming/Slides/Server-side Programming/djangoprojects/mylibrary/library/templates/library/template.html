@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Library</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'library/reset.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'library/stylesheet.css' %}">
+  {% block styles %}
+  {% endblock %}
+  
+  <script type="text/javascript">
+	function error(msg){
+		alert(msg);
+		return false;
+	}
+  </script>
+  
+  {% block script %}
+  {% endblock %}
+    
+ </head>
+ <body onload="onloadHandler()">
+	<div class="header">
+	    <div id="title" class="title">My library</div>
+	    <div class="search">
+		<form action="#" method="GET">
+		  Search <input type="text" name="q" />
+            <input type="hidden" name="criteria" value="Title" />
+            <input type="hidden" name="action" value="search" />
+		 </form>
+	    </div>
+	</div>
+	<nav class="leftNavigation">
+		<a class="button" href="{% url 'index' %}">Search</a>
+		{% if not request.session.user  %}
+		<a class="button" href="{% url 'login' %}">Login</a>
+		{% else %}
+		<a class="button" href="{% url 'logout' %}">Logout</a>
+		{% endif %}
+	</nav>
+	<section class="mainContent">
+		{% block main %} {% endblock %}	
+	</section>	
+ </body>
+</html>

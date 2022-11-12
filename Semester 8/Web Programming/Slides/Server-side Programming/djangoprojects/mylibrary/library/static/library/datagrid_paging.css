@@ -1,0 +1,10 @@
+.gridPager{
+	width:98%;
+	background-color:gray;
+	color:white;
+	text-align:right;
+}
+
+.gridPager a{
+	color:white;
+}

@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<resultset>
+	<metadata>
+		<columns>
+			<column>title</column>
+			<column>author</column>
+			<column>isbn</column>
+		</columns>
+	</metadata>
+	<data>
+		<maxPages>{{maxpages}}</maxPages>
+		<rows>
+			{% for row in rows %}
+			<row>
+				<title><![CDATA[{{row.title}}]]></title>
+				<author><![CDATA[{{row.authors}}]]></author>
+				<isbn>{{row.isbn}}</isbn>
+			</row>
+			{% endfor %}
+		</rows>
+	</data>
+</resultset>

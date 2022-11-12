@@ -1,0 +1,433 @@
+/* 
+---------------------------------------------------
+Reference Colors
+---------------------------------------------------
+   
+
+Main Color:             #325D79 (Dark Blue)
+Secondary Color:        #98D7D1 (Light Blue)
+Base Color:             #EFEEEE (Whitish White)
+Optional Color:         #f18c8e (Kind-of Pink)
+Maybe:                  #33e8a5 (Pixel Lime)
+Hover Color:            #056644 (Pakistan Green)
+
+Black:                  #191919
+Gray:                   gray
+---------------------------------------------------
+*/
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    margin: -50px 0px 20px 0px;
+}
+
+#nav_bar
+{
+    background-color: #EFEEEE;
+    font-weight: bold;
+    /* box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button.btn{
+    border-radius: 0px;
+}
+
+.btn:focus{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.logo{
+    filter: drop-shadow(0px 2px 0px rgba(245, 245, 245, 1));
+    margin-left:-5px;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+}
+
+/* 
+---------------------------------------------------
+Tool bar
+---------------------------------------------------
+*/
+
+#tool_bar{
+    list-style-type: none;
+    background-color: #EFEEEE;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    padding: .5rem 1rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+#tool_bar > li, #tool_bar > div.form-group{
+    height:fit-content;
+}
+
+#tool_bar > div.form-group{
+    margin-bottom: 0px;
+}
+
+#tool_bar li:first-child{
+    margin-left: 20px;
+}
+
+/* 
+---------------------------------------------------
+Link/Button on Nav bar
+---------------------------------------------------
+*/
+
+.nav-link{
+    color:gray;
+}
+
+/* On hover action*/
+.nav-link:hover{
+    color: #056644;
+}
+
+/* Active Link */
+.nav-item.active .nav-link{
+    border-bottom:3px solid #33e8a5;
+    color: #33e8a5;
+}
+
+/* 
+---------------------------------------------------
+Custom Toggler icon on Navbar
+---------------------------------------------------
+*/
+
+.navbar-toggler { 
+    border-color: gray; 
+    background-color: whitesmoke;
+} 
+
+/* 
+---------------------------------------------------
+Search bar on Nav bar
+---------------------------------------------------
+*/
+
+#navbar_search{
+    background-color:whitesmoke;
+    border-radius: 0px;
+    border-style: none;
+}
+
+#navbar_search:focus, #navbar_search:active{
+    border-bottom:3px solid #33e8a5;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+    background-color:whitesmoke;
+}
+
+/* Search icon */
+.form-inline button.btn{
+    color:#33e8a5;
+}
+
+.form-inline button.btn:hover{
+    color: whitesmoke;
+    background-color: #33e8a5;
+}
+
+/* 
+---------------------------------------------------
+Text formatting buttons and dropdowns
+---------------------------------------------------
+*/
+
+button.btn{
+    color:black;
+    border-radius: 0px; 
+    width: 35px;
+    height:35px;
+    padding-left: 6px;
+    padding-right:6px;
+}
+
+.btn:focus{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.btn:hover{
+    /* background-color: #33e8a5; */
+    background-color: gray;
+    color:#EFEEEE;
+}
+
+.btn:active{
+    background-color: #33e8a5;
+    color:#EFEEEE;
+}
+
+button.btn.active{
+    border-radius: 0px; 
+    width: 35px;
+    height:35px;
+    padding-left: 6px;
+    padding-right:6px;
+    background-color: #33e8a5;
+    color:#EFEEEE;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.form-group select{
+    background-color:whitesmoke;
+    border-radius: 0px;
+    border-style: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    width:fit-content;
+}
+
+.form-group select:focus, .form-group select:active{
+    border-bottom:3px solid #33e8a5;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+    background-color:whitesmoke;
+}
+
+#text_color_button{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    padding: 0px;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    color:none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+#text_color_selected_button{
+    margin-top: 4px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.vertical-separator{
+    height: 30px;
+    border-left: 1px solid rgb(218, 220, 224);
+    margin: 4px 0px 4px 0px;
+}
+
+/* li.dropdown.pt-2.ml-2 div.dropdown-menu{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+li.dropdown div.dropdown-menu a{
+    height: 2rem;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(1){
+    background-color:red;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(2){
+    background-color:black;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(3){
+    background-color:white;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(4){
+    background-color:blue;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(5){
+    background-color:yellow;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(6){
+    background-color:orange;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(7){
+    background-color:green;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(8){
+    background-color:pink;
+}
+
+li.dropdown div.dropdown-menu a:nth-child(9){
+    background-color:purple;
+} */
+
+/* 
+---------------------------------------------------
+Footer
+---------------------------------------------------
+*/
+
+footer{
+    background-color: #EFEEEE;
+    box-shadow: 0 -.125rem .25rem rgba(0,0,0,.075);
+}
+
+p a{
+    color:grey;
+    text-decoration: underline;
+}
+
+p a:hover{
+    color:#056644;
+    text-decoration: underline;
+}
+
+.footer-title{
+    color: #33e8a5;
+    font-weight: bold;
+}
+
+.social-media-icon:hover{
+    color:#056644;
+}
+
+.footer-logo.mb-4{
+    filter: drop-shadow(0px 2px 0px rgba(245, 245, 245, 1));
+    margin-left:-5px;
+}
+
+/* 
+---------------------------------------------------
+Text area
+---------------------------------------------------
+*/
+
+#text_area{
+    background-color:#EFEEEE;
+    border-radius: 0px;
+    border-style: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    margin-top: calc((100vh-445.65px)/2);
+    margin-bottom: calc((100vh-445.65px)/2);
+    resize: none;
+    height: 100vh;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    cursor:text;
+}
+
+#text_area:focus{
+    border-bottom:3px solid #33e8a5;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+    background-color:#EFEEEE;
+}
+
+/* 
+---------------------------------------------------
+Text box
+---------------------------------------------------
+*/
+
+#text_area_div{
+    width:100%!important;
+}
+
+/* 
+---------------------------------------------------
+Progress bar
+---------------------------------------------------
+*/
+
+.progress{
+    border-radius:0px;
+}
+
+.progress-bar{
+    background-color: #33e8a5;
+}
+
+#action_text{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* 
+---------------------------------------------------
+Toast
+---------------------------------------------------
+*/
+
+.toast{
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: 5%;
+    margin-top: -4%;
+    z-index: 9999;
+    min-width: 200px;
+    max-width: 350px;
+    width:350px;
+}
+
+.toast-header{
+    color: #056644;
+}
+
+/* 
+---------------------------------------------------
+Media Queries
+---------------------------------------------------
+*/
+
+@media(max-width:767px){
+    .navbar-brand{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:929px){
+    #tool_bar{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 11px;
+        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y:hidden;
+    }
+    #tool_bar li:first-child {
+        margin-left: 0px;
+    }
+}

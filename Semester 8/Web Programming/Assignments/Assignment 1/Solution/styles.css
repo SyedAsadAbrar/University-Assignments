@@ -1,0 +1,255 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafafa;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: black;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #263238;
+    overflow: hidden;
+    position: relative;
+    padding: 0%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+	color: #f2f2f2;
+	background-color: #17607D;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(176, 216, 218);
+    color: black;
+}
+  
+  /* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #17607D;
+    color: white;
+}
+
+/*DESKTOP SCREEN*/
+@media screen and (min-width: 801px){
+    .topnav a.menuMobile {
+		font-size: 0;
+	}
+	#categoriesIcon{
+		padding: 3px;
+	}
+	#filterButton{
+		display: none;
+	}
+}
+
+.topnav #menuButton{
+	display: none;
+	background-color: #212121;
+}
+
+/*MOBILE SCREEN*/
+@media screen and (max-width: 800px){
+	.mainScreen .filterInnerBoundary{
+		display:none;
+	}
+	.filter p{
+		display: none;
+	}
+	#categoriesIcon, #menuIcon {
+		margin-left:10px;
+	}
+	.topnav a:not(.menuMobile){
+		display: none;
+	}
+	.topnav #menuButton{
+		display: block;
+		float: right;
+	}
+	#filterButton{
+		display: block;
+		size: 100px;
+	}
+}
+
+.topnav a.menuMobile {
+    background-color: #212121;
+}
+
+.topnav a.menuMobile:hover {
+    background-color: #212121;
+    color: white;
+}
+
+.mainScreen
+{
+	display:flex;
+}
+
+.filter
+{
+	padding-left: 10px;
+	display:inline-block;
+}
+
+.filter>p
+{
+	font-weight: bold;
+	text-decoration: underline;
+	text-underline-position: below;
+	text-underline-offset: 10px;
+	text-decoration-color: lightgray;
+	padding-left: 10px;
+}
+
+.filterInnerBoundary{
+	height: 320px;
+	width: 205px;
+	border: 1px;
+	border-color: lightgray;
+	border-style: solid;
+	margin-top: 10px;
+}
+
+.filterHeading
+{
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.filterItem
+{
+	color: darkgray;
+	position: relative;
+	margin-left: 30px;
+	display: block;
+	white-space: nowrap;
+}
+
+.filterItem:hover
+{
+	color: #263238
+}
+
+.filterDivider
+{
+	color: darkgray;
+	margin-left: 10px;
+	display: block;
+}
+
+.filterCheckBox{
+    width:17px;
+    height:17px;
+	background:darkgray;
+	position: relative;
+	margin-left: 10px;
+	display: block;
+}
+
+.button {
+	background-color: #17607D;
+	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	float:right;
+	margin-right:20px;
+	cursor: pointer;
+}
+
+#filterButton {
+	background-color: #f2f2f2;
+	border: 1px;
+	border-style: solid;
+	border-color: darkgray;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	float:left;
+	cursor: pointer;
+	margin: 10px;
+	width: auto;
+	height: auto;
+}
+
+#filterButton:hover
+{
+	color: red;
+}
+
+.productSection
+{
+	float:left;
+	margin-left: 100px;
+	margin-top:40px;
+}
+
+div.gallery {
+	margin: 10px 10px 10px 10px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 350px;
+	height:350px;
+}
+
+div.gallery:hover button{
+	display:block;
+	background-color: darkgray;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	position: relative;
+	margin:auto;
+}
+  
+div.gallery img {
+	width: 80%;
+	height: 80%;
+	padding: 30px 30px 50px 30px;
+}
+  
+div.gallery:hover img{
+	transform: scale(1.2,1.2)
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+.gallery button{
+	display:none;
+	overflow: auto;
+}
+
+div.gallery button:hover
+{
+	background-color: #263238;
+}
+
+div.gallery .imageContainer{
+	width: 300px;
+	height:300px;
+	overflow: auto;
+}

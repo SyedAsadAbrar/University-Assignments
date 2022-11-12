@@ -1,0 +1,43 @@
+{% extends "library/template.html" %}
+
+{% block script %}
+<script type="text/javascript">
+		
+	function validateForm(id){
+		var username = document.getElementById('username');
+		var password = document.getElementById('password');
+
+		if(username.value == ''){
+			return error('username is empty');
+		}
+
+		if(password.value == ''){
+			return error('password is empty');
+		}
+
+		return true;
+	}
+</script>
+{% endblock %}
+
+
+{% block main %} 
+
+<h1>Login</h1>
+<br>
+<form method="post" action="{% url 'authenticate' %}">
+{% csrf_token %}
+ <div class="table" >
+   <div class="row">
+    <span class="cell">Username</span>
+    <span class="cell"><input size="25" name="username" id="username" value="" type="text"></span>
+   </div>
+   <div class="row">
+    <span class="cell">Password</span>
+    <span class="cell"><input size="25" name="password" id="password" value="" type="password"></span>
+   </div>
+  </div>
+ <input value="Login" type="submit" class="button" onclick='return validateForm()'> 
+</form>
+
+{% endblock %}	

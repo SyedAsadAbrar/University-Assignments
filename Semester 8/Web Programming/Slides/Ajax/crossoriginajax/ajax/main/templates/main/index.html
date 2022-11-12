@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <script type='text/javascript' >
+	function ajaxcall(){
+		ajax('/jsonp');
+	}
+	
+	function ajax(url){
+		/*
+		var i=document.createElement('img')
+		i.src = url;
+		i.style.display = "none";
+		document.body.appendChild(i);
+		*/
+		
+		var s=document.createElement('script')
+		s.src = url + "?jsonp=handler";		
+		document.body.appendChild(s);
+		
+	}
+	
+	function handler(data){
+		console.log(data);
+	}
+	
+	
+  </script>
+ </head>
+ <body>
+  <button onclick='ajaxcall()' >AJAX call </button>
+ </body>
+</html>

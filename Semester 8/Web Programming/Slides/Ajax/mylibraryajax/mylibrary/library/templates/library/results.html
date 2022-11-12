@@ -1,0 +1,50 @@
+{% extends "library/template.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'library/datagrid.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'library/datagrid_paging.css' %}" />
+{% endblock %}
+
+{% block script %}
+<!--
+<script type='text/javascript' src="{% static 'library/datagrid.js' %}"></script>
+<script type='text/javascript' src="{% static 'library/datagrid_paging.js' %}"></script>
+-->
+<script type='text/javascript' src="{% static 'library/ajax.js' %}"></script>
+<script type='text/javascript' src="{% static 'library/datagrid_ajax.js' %}"></script>
+<script type='text/javascript'>
+	var grid;
+
+	function onloadHandler(){
+		var header = ['title','author'];
+		var datasource = new Array();                
+ //       grid = new DataGrid(header,datasource);
+		grid = new DataGrid('/searchxml')		
+		grid.addFilter('q','{{query}}');		
+		grid.setPageSize(20);		
+		{{ result|safe }}
+		
+		grid.display('grid_id');     
+	}		
+	
+	function grid_next(){
+		grid.nextPage();
+	}
+
+	function grid_previous(){
+		grid.previousPage();
+	}
+</script>
+{% endblock %}
+
+{% block main %} 
+
+<h1>Search Results</h1>
+<br>	
+You searched for 
+{{ query }}
+<br/><br/>
+<div id='grid_id'></div>
+
+{% endblock %}	

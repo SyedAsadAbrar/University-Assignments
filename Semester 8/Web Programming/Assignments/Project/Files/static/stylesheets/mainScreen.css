@@ -1,0 +1,266 @@
+/* 
+---------------------------------------------------
+Reference Colors
+---------------------------------------------------
+   
+
+Main Color:             #325D79 (Dark Blue)
+Secondary Color:        #98D7D1 (Light Blue)
+Base Color:             #EFEEEE (Whitish White)
+Optional Color:         #f18c8e (Kind-of Pink)
+Maybe:                  #33e8a5 (Pixel Lime)
+Hover Color:            #056644 (Pakistan Green)
+
+Black:                  #191919
+Gray:                   gray
+---------------------------------------------------
+*/
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    margin: -50px 0px 20px 0px;
+}
+
+#nav_bar
+{
+    background-color: #EFEEEE;
+    font-weight: bold;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+button.btn{
+    border-radius: 0px;
+}
+
+.btn:focus{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.btn-create{
+    background-color: #33e8a5;
+    color:#EFEEEE;
+    border-radius: 0px;    
+    border: 0px solid red;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: fit-content; */
+}
+
+.btn-create:focus{
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+}
+
+.btn-create:hover{
+    background-color: #056644;
+    color:#EFEEEE;
+    text-decoration: none;
+}
+
+.logo{
+    filter: drop-shadow(0px 2px 0px rgba(245, 245, 245, 1));
+    margin-left:-5px;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+}
+
+/* 
+---------------------------------------------------
+Link/Button on Nav bar
+---------------------------------------------------
+*/
+
+.nav-link{
+    color:gray;
+}
+
+/* On hover action*/
+.nav-link:hover{
+    color: #056644;
+}
+
+/* Active Link */
+.nav-item.active .nav-link{
+    border-bottom:3px solid #33e8a5;
+    color: #33e8a5;
+}
+
+/* 
+---------------------------------------------------
+Custom Toggler icon on Navbar
+---------------------------------------------------
+*/
+
+.navbar-toggler { 
+    border-color: gray; 
+    background-color: whitesmoke;
+} 
+
+/* 
+---------------------------------------------------
+Search bar on Nav bar
+---------------------------------------------------
+*/
+
+#navbar_search{
+    background-color:whitesmoke;
+    border-radius: 0px;
+    border-style: none;
+}
+
+#navbar_search:focus, #navbar_search:active{
+    border-bottom:3px solid #33e8a5;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    outline: 0 none;
+    background-color:whitesmoke;
+}
+
+/* Search icon */
+.form-inline button.btn{
+    color:black;
+}
+
+.form-inline button.btn:hover{
+    color: whitesmoke;
+    background-color: #33e8a5;
+}
+
+/* 
+---------------------------------------------------
+Main Welcome Element (jumbotron)
+---------------------------------------------------
+*/
+
+.jumbotron{
+    height:100%;
+    background-color: #EFEEEE;
+    border-radius: 0px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    width:auto;
+}
+
+/* 
+---------------------------------------------------
+Table for docs
+---------------------------------------------------
+*/
+
+.table{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    width:100%;
+    border-top: 0px;
+}
+
+/* Setting default text and background color */
+.table tbody tr >td{
+    color: black;
+    background-color: white;
+    vertical-align:middle;
+}
+
+/* Setting default appearence for table header */
+thead.thead-docs{
+    font-size: larger;
+    font-weight: bold;
+    background-color: #EFEEEE;
+    border: 0px;
+    /* padding: 20px 0px 0px 20px; */
+}
+
+/* Setting default appearence for selected row */
+.table tbody tr.table-active>td, .table tbody tr.table-active:hover>td{
+    background-color: #33e8a5;
+    color:white;
+}
+
+/* Setting default appearence for share and download button in selected row */
+.table tbody tr.table-active>td .btn-group .btn{
+    color:white;
+}
+
+/* Setting onhover attribute for share and download button in selected row */
+.table tbody tr.table-active:hover td .btn-group .btn:hover{
+    background-color: white;
+    color:#33e8a5;
+}
+
+/* Setting on hover for non-selected rows */
+.table-hover tr:hover td{
+    background-color: #056644;
+    color:white;
+}
+
+/* Setting default appearence for share and download button in non-selected row */
+td .btn-group .btn{
+    color: black;
+    background-color: none;
+}
+
+/* Setting onhover attribute for share and download button in non-selected row */
+td .btn-group .btn:hover{
+    color: #056644;
+    background-color: black;
+}
+
+/* 
+---------------------------------------------------
+Footer
+---------------------------------------------------
+*/
+
+footer{
+    background-color: #EFEEEE;
+    box-shadow: 0 -.125rem .25rem rgba(0,0,0,.075);
+}
+
+p a{
+    color:grey;
+    text-decoration: underline;
+}
+
+p a:hover{
+    color:#056644;
+    text-decoration: underline;
+}
+
+.footer-title{
+    color: #33e8a5;
+    font-weight: bold;
+}
+
+.social-media-icon:hover{
+    color:#056644;
+}
+
+.footer-logo.mb-4{
+    filter: drop-shadow(0px 2px 0px rgba(245, 245, 245, 1));
+    margin-left:-5px;
+}
+
+/* 
+---------------------------------------------------
+Media Queries
+---------------------------------------------------
+*/
+
+@media (max-width: 767px){
+    table td:nth-child(2), table td:nth-child(3), th:nth-child(2), table th:nth-child(3){
+        display: none;
+    }
+}
