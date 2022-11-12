@@ -1,0 +1,6 @@
+Statement 1
+Q1.	The packets follow the path 0->1->2->3 initially because it has the smallest number of hops to reach node 3. 
+Q2. The packets follow the path 0->6->5->4->3 because the link between node 2 and 3 is down so now this is the shortest path.
+Q3. The packets follow the path 0->1->2 after the link fails because of the direction of the links.
+
+Statement 2

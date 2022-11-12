@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html -->
+<html xmlns:fb="//www.facebook.com/2008/fbml" xmlns:og="//opengraphprotocol.org/schema/" lang="en" xml:lang="en" class="js htmlimports applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange audio canvas canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil mediaqueries fontface generatedcontent speechrecognition cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions no-compatibilitymodeoverthrow-enabled megamenu indexeddb custom-font indexeddb-deletedatabase htmlimports applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange audio canvas canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil mediaqueries fontface generatedcontent speechrecognition cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions no-touch indexeddb" style=""><!--<![endif]--><head class="at-element-marker" style="visibility:visible;"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/adrum-ext.206c403a1a532b310b15ea4509f4902b.js.download"></script><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/116505272317553" async=""></script><script type="text/javascript" async="" charset="utf-8" id="utag_213" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/fbevents.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_198" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/vt-89.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_83" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/6si.min.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_76" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/ytc.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_75" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/bat.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="tealium-tag-7110" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/analytics.js.download"></script><script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/elqCfg.min.js.download"></script><script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/insight.min.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_58" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/8a1d0a1c4fdd2778014fe08b2202043b.js.download"></script><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.js.download" type="text/javascript" data-config-src="framework" async=""></script><script type="text/javascript" async="async" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/id"></script><script type="text/javascript" async="async" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/id(1)"></script>
+    
+
+
+
+
+
+
+
+
+
+	<script>window['adrum-start-time'] = new Date().getTime();</script><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/adrum.js.download"></script>
+	<script>(function(config){(function(xd){xd.enable=true;})(config.xd||(config.xd={}));})(window['adrum-config']||(window['adrum-config']={}));</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+ 
+    <title>Subnet Zero and the All-Ones Subnet - Cisco</title>
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+<meta name="format-detection" content="telephone=no">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <meta name="description" content="Subnetting breaks down a given network address into smaller subnets. Coupled with other technologies like Network Address Translation (NAT) and Port Address Translation (PAT), it allows for the more efficient use of available IP address space, thereby alleviating the problem of address depletion to a great extent. Subnetting has guidelines regarding the use of the first and the last subnets, known as subnet zero and the all-ones subnet, respectively. This document discusses subnet zero and the all-ones subnet and their uses. ">
+    <meta name="title" content="Subnet Zero and the All-Ones Subnet">
+    <meta name="documentId" content="13711">
+    <meta name="fb:app_id" content="156494687694418">
+    <meta name="ioContentSource" content="support">
+    <meta name="concept" content="IP Addressing Services">
+    <meta name="secondaryConcept" content="Dynamic Address Allocation and Resolution">
+    <meta name="ioProblemType" content="Design">
+    <meta name="docType" content="TSD Technologies Tech Note">
+    <meta name="iaPath" content="cisco.com#Technologies#IP#IP Addressing Services">
+    <meta name="contentType" content="cisco.com#US#postSales">
+    <meta name="locale" content="US">
+    <meta name="language" content="en">
+    <meta name="country" content="US">
+    <meta name="date" content="Thu May 25 15:48:53 PDT 2017">
+    <meta name="contentArea" content="IP Routing">
+    <meta name="accessLevel" content="Customer">
+    <meta name="accessLevel" content="Guest">
+    <meta name="accessLevel" content="Partner">
+    <meta name="entitlementExpression" content="contains( &quot;0,1,2,3,4,7&quot; , $profileField[3] )">
+    <meta property="og:site_name" content="Cisco">
+    <meta property="og:image" content="https://www.cisco.com/web/fw/i/logo-open-graph.gif">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Subnet Zero and the All-Ones Subnet">
+    <meta property="og:description" content="Subnetting breaks down a given network address into smaller subnets. Coupled with other technologies like Network Address Translation (NAT) and Port Address Translation (PAT), it allows for the more efficient use of available IP address space, thereby alleviating the problem of address depletion to a great extent. Subnetting has guidelines regarding the use of the first and the last subnets, known as subnet zero and the all-ones subnet, respectively. This document discusses subnet zero and the all-ones subnet and their uses. ">
+    <meta property="og:url" content="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+    <link rel="canonical" href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+	<link rel="alternate" hreflang="x-default" href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="ja-jp" href="https://www.cisco.com/c/ja_jp/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="pt-br" href="https://www.cisco.com/c/pt_br/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="ru-ru" href="https://www.cisco.com/c/ru_ru/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="zh-cn" href="https://www.cisco.com/c/zh_cn/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="es-mx" href="https://www.cisco.com/c/es_mx/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="fr-ca" href="https://www.cisco.com/c/fr_ca/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+<link rel="alternate" hreflang="en-us" href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">
+
+
+    
+ 
+    <!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
+    <!--[if gt IE 8]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on">
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- start loading client context -->
+   	
+    	<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utils.min.js.download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/granite.min.js.download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/jquery.min.js(1).download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/shared.min.js.download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/underscore.min.js.download"></script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/kernel.min.js.download"></script>
+<script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("\x2Fetc\x2Fsegmentation");
+        CQ_Analytics.ClientContextUtils.init("\x2Fc\x2Fdnc\x2Fetc\x2Fclientcontext\x2Fdefault", "\x2Fcontent\x2Fen\x2Fus\x2Fsupport\x2Fdocs\x2Fip\x2Fdynamic\x2Daddress\x2Dallocation\x2Dresolution\x2F13711\x2D40");
+
+        
+    });
+</script>
+
+    
+    <!-- end loading client context -->
+    <link rel="stylesheet" href="./Subnet Zero and the All-Ones Subnet - Cisco_files/cisco-sans.min.css" type="text/css">
+
+    
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/foundation.min.js.download"></script><style type="text/css"></style>
+
+    
+    <!--[if (IEMobile 7) | (lt IE 9)]>
+        
+    <![endif]-->
+    <!--[if (!IE) | (gt IE 8)]><!-->
+        <link rel="stylesheet" href="./Subnet Zero and the All-Ones Subnet - Cisco_files/responsive.min.css" type="text/css">
+
+    <!--<![endif]-->    
+    
+
+    
+
+
+
+
+
+
+
+
+
+<script>
+    var ua = window.navigator.userAgent;
+
+    if (ua.indexOf('MSIE') == -1 && ua.indexOf('Trident') == -1) {
+        var adapter;
+        adapter = document.createElement("script");
+        adapter.setAttribute("src", "/etc/designs/cdc/fw/lib/webcomponents/custom-elements-es5-adapter.js");
+        adapter.setAttribute("type", "text/javascript");
+        var wl = document.createElement("script");
+        wl.setAttribute("src", "/etc/designs/cdc/fw/lib/webcomponents/webcomponents-loader.js");
+        wl.setAttribute("type", "text/javascript");
+        var poly = document.createElement("link");
+        poly.setAttribute("href", "/etc/designs/cdc/fw/lib/polymer/polymer-element.html");
+        poly.setAttribute("rel", "import");
+        var swc = document.createElement("link");
+        swc.setAttribute("href", "/c/en/us/web-component/cdc-search.html");
+        swc.setAttribute("rel", "import");
+    
+        if (adapter !== undefined) { document.head.appendChild(adapter); }
+        document.head.appendChild(wl);
+
+        document.addEventListener('WebComponentsReady', function () {
+            document.head.appendChild(poly);
+            document.head.appendChild(swc);
+
+            document.getElementById('fw-search').outerHTML = "";
+            document.getElementById('fw-searchbutton').classList.add('ready');
+        });
+    }
+</script><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/custom-elements-es5-adapter.js.download" type="text/javascript"></script><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/webcomponents-loader.js.download" type="text/javascript"></script>
+
+    
+    
+    
+    
+    
+    
+
+    
+
+    <!-- JS CodeSnippet for  US96265 & US106574 : Automatic Schema markup on all Cisco.com pages -->
+    <script type="application/ld+json">
+        [{
+          "@context": "http://www.schema.org",
+          "@type": "WebPage",
+          "name": "Subnet Zero and the All-Ones Subnet",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html",
+          "description": "Subnetting breaks down a given network address into smaller subnets. Coupled with other technologies like Network Address Translation (NAT) and Port Address Translation (PAT), it allows for the more efficient use of available IP address space, thereby alleviating the problem of address depletion to a great extent. Subnetting has guidelines regarding the use of the first and the last subnets, known as subnet zero and the all-ones subnet, respectively. This document discusses subnet zero and the all-ones subnet and their uses. ",
+          "publisher": {
+              "@type": "Corporation",
+                 "name": "Cisco"
+            }
+        }]
+    </script>  
+ 
+<link rel="stylesheet" type="text/css" href="./Subnet Zero and the All-Ones Subnet - Cisco_files/support-docs.css"><style id="at-id-default-content-style">.mboxDefault {visibility:hidden;}</style><script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/cdcvalid.js.download"></script><link rel="stylesheet" type="text/css" href="./Subnet Zero and the All-Ones Subnet - Cisco_files/megamenu.min.css"><script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/ctm.js.download" data-config-src="framework"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="etc/designs/cdc/fw/j/psa_typeahead_common" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/psa_typeahead_common.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="etc/designs/cdc/fw/w/cl/id30/id30v4" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/id30v4.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://www.cisco.com/web/fw/j/megamenu.min.js" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/megamenu.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="etc/designs/cdc/fw/j/config" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/config.js.download"></script><script type="text/javascript">window.ttMETA=(typeof(window.ttMETA)!='undefined')?window.ttMETA:[];window.ttMETA.push({'mbox':'target-global-mbox','campaign':'','experience':'','offer':''});window.ttMBX=function(x){var mbxList=[];for(i=0;i<ttMETA.length;i++){if(ttMETA[i].mbox==x.getName()){mbxList.push(ttMETA[i])}}return mbxList[x.getId()]}</script><script type="text/javascript">
+//plugin safe for search
+
+jQuery(document).ready(function() {
+
+    if ((typeof cdc !== "undefined") && (typeof cdc.util !== "undefined") && (typeof cdc.util.ensureNamespace !== "undefined") && (typeof cdc.sso !== "undefined") && (typeof cdc.includer !== "undefined")) {
+
+        cdc.util.ensureNamespace("cdc.mbox"); // safe way to make sure cdc.mbox exists
+        cdc.mbox.adDefaultIntervalUnits = "h"; //d = days, h = hours, m=minutes
+        cdc.mbox.adDefaultInterval = 24;
+        if('' != ""){ cdc.mbox.adDefaultInterval = 24; }
+        if('' != "") { cdc.mbox.adDefaultIntervalUnits = 'h'; }
+        cdc.mbox.adParams = new Array();
+
+        cdc.mbox.authState = '';
+        cdc.mbox.vp_profileTester = "loaded";//'';
+        cdc.mbox.lastVPUpdate = '';
+
+        if(typeof(cdc.mbox.ajaxServer) == "undefined"){ cdc.mbox.ajaxServer = "https://" + location.host + "/cisco/web/cdc/virtualprofile?groupName=target"; }
+        jQuery(function(){
+        cdc.includer.loadJs('/web/fw/ltc/tools/mbox/plugin_vp.js?2014January',{
+            callback: function(){
+            cdc.util.checkLogin(function(val){
+            cdc.mbox.adAuthVar = (val == 'valid' ? true : false);
+            });
+
+            if(typeof(cdc.mbox.ad_ReadJSON) != "undefined"){
+            cdc.mbox.ad_ReadJSON();
+            }
+            else if(typeof(cdc.mbox.ad_ReadVPInfo) != "undefined"){
+            cdc.mbox.ad_ReadVPInfo();
+            }
+            }
+        });
+        });
+
+    }
+
+});
+
+</script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_27" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.27.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_58" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.58.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_63" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.63.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_64" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.64.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_65" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.65.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_67" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.67.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_75" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.75.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_76" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.76.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_83" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.83.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_180" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.180.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_190" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.190.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_198" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.198.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_213" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.213.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="utag_cisco.support_215" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.215.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="//www.cisco.com/web/fw/ltc/tools/mbox/plugin_vp.js?2014January" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/plugin_vp.js.download"></script><script type="text/javascript" async="" charset="utf-8" id="tiqapp" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/utag.v.js.download"></script><link href="https://www.cisco.com/etc/designs/cdc/fw/lib/polymer/polymer-element.html" rel="import"><link href="https://www.cisco.com/c/en/us/web-component/cdc-search.html" rel="import"></head>
+
+<body id="wcq" class="fw-res cdc-support cdc-eot cdc-high-density cdc-full-width" bgcolor="#FFFFFF" style="">
+    <!--[if IE 8]><ie xmlns="html5"><![endif]-->
+    
+    
+
+
+
+
+
+
+
+
+
+<script>
+
+  $(function () {
+
+  if($('#booksearch').length==1){
+        $('#skiplink-content').attr("href", "#booksearch");
+  	}else if($('#eot-doc-wrapper').length==1){
+        $('#skiplink-content').attr("href", "#eot-doc-wrapper");
+
+       }
+   });
+  </script>
+
+<div id="fw-skiplinks">
+    <ul class="container">
+         <li><a id="skiplink-home" href="https://www.cisco.com/c/en/us/index.html">Home</a></li>
+
+        <li><a id="skiplink-content" href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#eot-doc-wrapper">Skip to content</a></li>
+        
+        <li><a id="skiplink-footer" href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#fw-footer" class="last">Skip to footer</a></li>
+    </ul>
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    
+    var cookieInformerMsg = "&nbsp;";
+    var cookieInformerBtn = "&nbsp;";
+    
+    if (typeof cdc === 'undefined') {cdc = {};}
+    if (typeof cdc.emp === 'undefined') {cdc.emp = {};}
+    cdc.emp['employees'] = "Employees";
+    cdc.emp['accessRequired'] = "Vpn Access Required";
+</script>
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/masthead.js.download"></script>
+
+<style type="text/css">
+    #employee-mm-item.disabled .emphover.active:after {content: "Vpn Access Required";}
+</style>
+
+<!-- begin: masthead -->
+<header id="fw-masthead" class="cdc-webcomponent" data-owner="ID">
+    <div id="fw-banner">
+       
+
+
+
+
+
+
+
+
+
+
+<!-- Start: utility links -->
+    <nav id="fw-utility" data-owner="ID">
+        <ul id="language">
+            <li class="no-pipe"><a href="https://www.cisco.com/c/m/en_us/worldwide/locator.html"><img src="./Subnet Zero and the All-Ones Subnet - Cisco_files/global-icon.svg">Worldwide [change]</a></li>
+        </ul>
+
+        <ul id="actions" class="guest-actions">
+             
+                <li class="fw-login-util"><a href="https://www.cisco.com/c/login/index.html?referer=/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Log In</a></li>
+            
+
+            <li class="fw-account-util"><a href="https://www.cisco.com/c/en/us/about/account.html">Account</a></li>
+
+            
+                <li class="fw-register-util no-pipe"><a href="https://idreg.cloudapps.cisco.com/idreg/guestRegistration.do?referer=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Register</a></li>
+            
+
+            
+
+            
+        </ul>
+
+        
+        <div id="mycisco"><a href="https://www.cisco.com/cisco/psn/web/workspace">My Cisco</a></div>
+        
+    </nav>
+<!-- End: utility links -->
+
+
+        <button id="fw-treenavbutton" data-treenav="/c/dam/global/en_us/framework/treenav.json">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <a id="fw-logo" href="https://www.cisco.com/c/en/us/index.html">
+            <div>Cisco.com Worldwide Home</div>
+        </a>
+
+        
+        <nav id="fw-areanav">
+            <ul>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <li id="products-mm-item">
+ <a href="https://www.cisco.com/c/en/us/products/index.html">Products &amp; Services</a>
+ <a href="https://www.cisco.com/c/dam/global/en_us/framework/menu-content.js#products-mm-menu" class="mm-reflink">(menu)</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li id="support-mm-item">
+    <a href="https://www.cisco.com/c/en/us/support/index.html">Support</a>
+    <a href="https://www.cisco.com/c/dam/global/en_us/framework/menu-content.js#support-mm-menu" class="mm-reflink">(menu)</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+ <li id="ordering-mm-item">
+   <a href="https://www.cisco.com/c/en/us/buy.html">How to Buy</a>
+   
+ <div class="mm-menu clb mm-us" id="ordering-mm-menu">
+    <div class="mm-container">
+        <div class="mm-content mm-cols-7-8">
+
+
+            <div class="mm-col mm-first-col" style="width: 160.5px; height: 385px;">
+                <div class="mm-sect">
+
+					<h3>Connect with our Partner Ecosystem</h3>
+					<ul>
+                    	<li><a href="https://www.cisco.com/c/en/us/solutions/partner-ecosystem.html">Meet our Partners</a></li>
+						<li><a href="https://locatr.cloudapps.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Reseller</a></li>
+					</ul>
+				</div>
+				
+				<div class="mm-sect">
+
+					<h3>Services</h3>
+					<ul>
+						<li><a href="https://connectthedots.cisco.com/connectdots/serviceWarrantyFinderRequest?fl=sf">Service Finder</a></li>
+						<li><a href="https://www.cisco.com/c/en/us/services/order-services.html">Service Ordering and Contract Management</a></li>
+					</ul>
+				
+				</div>
+
+
+				<div class="mm-sect">
+
+					<h3>Financing</h3>
+					<ul>
+						<li><a href="https://www.cisco.com/c/en/us/buy/cisco-capital-finance/overview.html">Financing Options</a></li>
+					</ul>
+				
+				</div>			
+				
+				
+				<div class="mm-sect">
+				
+					<h3>Ordering Questions?</h3>
+					<ul>
+						<li><a href="https://www.cisco.com/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+					</ul>
+				</div>
+				
+            </div>
+
+            <div class="mm-col" style="width: 190.5px; height: 385px;">
+			
+				<div class="mm-sect">
+					<h3>Order Directly from Cisco</h3>
+					<p>Available for registered direct purchase customers. </p>
+					<ul>
+						<li><a href="https://www.cisco.com/c/login/index.html?referer=/c/en/us/buy.html">Log In</a></li>
+					</ul>
+				</div>	
+				
+				<div class="mm-sect">
+					<h3>New Customer or Partner?</h3>
+					<ul>
+						<li><a href="https://www.cisco.com/c/en/us/buy/how-to-order/order-direct.html">Learn About Direct Ordering</a></li>
+					</ul>
+				</div>
+				
+				<div class="mm-sect">
+				
+					<h3>Direct Ordering Tools</h3>
+					<ul>
+						<li><a href="https://apps.cisco.com/Commerce/guest">Build &amp; Price</a></li>
+						<li><a href="https://apps.cisco.com/Commerce/guest">Cisco Commerce (CCW)</a></li>
+						<li><a href="https://software.cisco.com/" class="mm-secure">Cisco Software Central</a></li>
+						<li><a href="https://www.cisco.com/c/login/index.html?referer=/c/en/us/buy.html" class="mm-secure">View All Commerce Tools</a></li>
+					</ul>
+				</div>
+				
+            </div>
+
+            <p class="mm-overall"><a href="https://www.cisco.com/c/en/us/buy.html">All Ordering Options</a></p>
+        </div>
+    </div>
+      <script type="text/javascript">
+
+      jQuery('#ordering-mm-menu').closest('td').attr("id","ordering-mm-item");
+
+  </script>
+
+</div></li>
+
+
+
+
+
+
+
+
+
+
+
+ <li id="training-mm-item">
+ <a href="https://www.cisco.com/c/en/us/training-events.html">Training &amp; Events</a>
+ <a href="https://www.cisco.com/c/dam/global/en_us/framework/menu-content.js#training-mm-menu" class="mm-reflink">(menu)</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+ <li id="partner-mm-item">
+ <a href="https://www.cisco.com/c/en/us/partners.html">Partners</a>
+ <a href="https://www.cisco.com/c/dam/global/en_us/framework/menu-content.js#partner-mm-menu" class="mm-reflink">(menu)</a>
+</li>
+
+
+
+            </ul>
+        </nav>
+        
+
+        <span class="search-entitlement">Guest</span>
+
+        
+
+        <div id="fw-masthead-overlay-arrow"></div>
+
+        <button id="fw-searchbutton" tabindex="1" title="search" class="ready">
+            <div></div>
+        </button>
+    </div>
+
+    <div id="fw-masthead-overlay">
+        <cdc-search tabindex="-1" has-type-ahead="" has-close-button="" has-voice-search=""></cdc-search>
+    </div>
+
+</header>
+<!-- ends: masthead -->
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="fw-content" class="container grid">
+    
+    
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+<div class="row full blowout" data-owner="ID">
+	<div class="col full ">
+		
+		        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<nav id="fw-breadcrumb" class="data-based" data-owner="ID">
+    <ul itemscope="" itemtype="//schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem"><a itemprop="item" href="https://www.cisco.com/c/en/us/support/index.html"><span itemprop="name">Support</span><meta itemprop="position" content="1"></a><span class="caret"></span></li><li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem"><a itemprop="item" href="https://www.cisco.com/cisco/web/psa/troubleshoot.html?mode=tech"><span itemprop="name">Technology Support</span><meta itemprop="position" content="2"></a><span class="caret"></span></li><li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem"><a itemprop="item" href="https://www.cisco.com/cisco/web/psa/troubleshoot.html?mode=tech&amp;level0=268435929"><span itemprop="name">IP</span><meta itemprop="position" content="3"></a><span class="caret"></span></li><li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem"><a itemprop="item" href="https://www.cisco.com/c/en/us/tech/ip/ip-addressing-services/index.html"><span itemprop="name">IP Addressing Services</span><meta itemprop="position" content="4"></a><span class="caret"></span></li><li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem"><a itemprop="item" href="https://www.cisco.com/c/en/us/tech/ip/ip-addressing-services/tsd-technology-support-troubleshooting-technotes-list.html"><span itemprop="name">Troubleshooting TechNotes</span><meta itemprop="position" content="5"></a><span class="caret"></span></li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		        <h1 id="fw-pagetitle" class="" data-owner="ID">Subnet Zero and the All-Ones Subnet</h1>
+		
+	</div>
+</div>
+
+     <!--googleon: index--><!--googleon: snippet-->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="row twothirds-third visitedlinks">-->
+<!-- US49416 -->
+<!--<div class="row blowout twothirds-third visitedlinks">-->
+<div class="row blowout wide-narrow-v2 visitedlinks">
+    <!--end-->
+    <!--<div class="col two-third">-->
+    
+    	<div class="col wide-v2" style="overflow:auto;">
+        
+            
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    if (typeof(cdc) == "undefined") cdc={};
+    if (typeof(cdc.translations) == "undefined") cdc.translations={};
+
+</script>
+
+
+    <div class="docHeaderComponent">
+        <div class="linksRow">
+            
+            <div class="toolbar">           
+            <!-- Translation Selctor -->
+            <!-- Translation Selector is used on EOT and Books pages. if a page has a locale of en_US then it will provide a list of avaible translations, if its a translated page (non english locale) then provide the link to the english locale. -->
+
+		<div class="noprint translations">
+			<a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#">
+				<button type="button" class="translations-link anchor">
+					<div class="toolbarIcon translationsIcon"></div>
+					<label class="iconLabel">Translations</label>
+				</button>
+			</a>
+		</div>
+   	
+
+<script type="text/javascript">
+/* Specifically for books at the simple overlay trigger class on English locale pages, if its a non english locale do not add the trigger. */
+	if(jQuery('body').hasClass('cdc-books') && !jQuery('a').hasClass('nonEnglish')) {
+		jQuery('.translations').addClass('simpleOverlay-trigger');
+	}
+</script>
+            
+                <div class="noprint downloadDocument"><button type="button" class="view-download-list-link anchor"><div class="toolbarIcon downloadIcon"></div><label class="iconLabel">Download</label></button></div>
+            
+            
+                <div class="noprint printDocument js-only"><button type="button" class="anchor printPage"><div class="toolbarIcon printIcon"></div><label class="iconLabel">Print</label></button></div>
+            
+            </div>
+
+        </div>
+            <!-- Where translation selector list of available languages is set up for EOT pages, for the javascript to work must have <ul id="translationsList"> </ul> -->
+            
+                    <script language="javascript">                    
+                        cdc.translations.map = "{ja-jp=https://www.cisco.com/c/ja_jp/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, pt-br=https://www.cisco.com/c/pt_br/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, ru-ru=https://www.cisco.com/c/ru_ru/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, zh-cn=https://www.cisco.com/c/zh_cn/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, es-mx=https://www.cisco.com/c/es_mx/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, fr-ca=https://www.cisco.com/c/fr_ca/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, en-us=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html, x-default=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html}";//storing the map for use in the JS
+                        cdc.translations.locale="en_us";
+                    </script>
+                    <div class="availableLanguagesList cdc-expandPanel" style="display: none;">
+                        <h3>Available Languages</h3>
+                        <ul id="translationsList">
+                
+                          <li><a href="https://www.cisco.com/c/ja_jp/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">日本語</a></li><li><a href="https://www.cisco.com/c/pt_br/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Português (Brasil)</a></li><li><a href="https://www.cisco.com/c/ru_ru/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Русский</a></li><li><a href="https://www.cisco.com/c/zh_cn/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html"> 简体中文</a></li><li><a href="https://www.cisco.com/c/es_mx/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Español</a></li><li><a href="https://www.cisco.com/c/fr_ca/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Français (Canada)</a></li></ul> 
+                <button value="Close panel" title="Close panel" class="close-button"><span></span><span></span></button></div>
+           
+            
+            <div class="noprint panelRow">
+                <div class="download-list cdc-expandPanel" style="display: none;">
+                    <h3>Download Options</h3>
+                    <ul>
+                    
+                        <li>                            
+                            <div class="fileText">
+                                <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.pdf" class="download-pdf"><div class="fileIcon pdfIcon"></div>PDF</a>
+                                 
+                                <span class="docSize">(16.0 KB)</span>
+                                
+                                <br>
+                                <span class="description">View with Adobe Reader on a variety of devices</span>
+                            </div>
+                        </li>
+                    
+                    </ul>
+                <button value="Close panel" title="Close panel" class="close-button"><span></span><span></span></button></div>
+            </div>
+        
+
+        <div class="infobarClearFix">
+            <div class="infobar">               
+				
+                    <div class="updatedDate"><span>Updated:</span>August 10, 2005</div>
+                
+                
+                    <div class="documentId"><span>Document ID:</span>13711</div>
+
+                 
+            </div>
+                
+        </div>
+    </div>
+
+
+
+    
+    
+    
+
+    
+    <script type="text/javascript">
+           if (typeof cdc === "undefined") cdc={};
+           if (typeof cdc.rc  === "undefined") cdc.rc={};
+    </script>
+    <script type="text/javascript">
+        // initialize dictionary for i18n
+        var pagelanguage = "en_US".replace("_","-");
+        var pagelocale = pagelanguage+".1";
+        _g.I18n.setLocale(pagelocale.toLowerCase());
+        _g.I18n.setUrlPrefix("/etc/designs/cdc/fw/w/responsive_components/eot/i18n/");
+    </script>
+    
+        
+	
+
+    
+
+
+
+
+
+
+
+
+
+ 
+
+  
+    
+
+    
+<div id="eot-doc-wrapper">
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+  <link rel="stylesheet" type="text/css" href="./Subnet Zero and the All-Ones Subnet - Cisco_files/support-responsive.css"> 
+  <!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="/c/dam/en/us/support/docs/common/ie7.css">
+<![endif]--> 
+  <!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="/c/dam/en/us/support/docs/common/ie8.css">
+<![endif]--> 
+  <!--googleoff: all--> 
+  <!-- AddThis Button BEGIN --> 
+  <script language="JavaScript"> loadjscssfile('/c/dam/en/us/support/docs/common/support-docs.css','css');</script> 
+  <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script> 
+  <!--googleon: all-->
+  <!--PAWS:EndOFRelatedDocumentsSection--> 
+  <div id="tg-body" style="overflow-x: auto;">
+   <div id="support-toc"> 
+    <h2>Contents</h2> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#intro">Introduction </a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#prereq">Prerequisites</a> 
+    </div> 
+    <div class="toc-h3"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#req">Requirements</a> 
+    </div> 
+    <div class="toc-h3"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#hw">Components Used</a> 
+    </div> 
+    <div class="toc-h3"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#conv">Conventions</a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#subnetzero">Subnet Zero</a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#theallonesubnet">The All-Ones Subnet</a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#problemswithsubnetzero">Problems with Subnet Zero and the All-Ones Subnet</a> 
+    </div> 
+    <div class="toc-h3"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#subnetzero2">Subnet-Zero</a> 
+    </div> 
+    <div class="toc-h3"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#theallonessubnet">The All-Ones Subnet</a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#usingsubnetzeroandtheallonessubnet">Using Subnet Zero and the All-Ones Subnet</a> 
+    </div> 
+    <div class="toc-h2"> 
+     <a href="https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html#related">Related Information</a>
+    </div> 
+   </div> 
+   <h2> <a name="intro">Introduction </a> </h2> 
+   <p>Subnetting breaks down a given network address into smaller subnets. Coupled with other technologies like Network Address Translation (NAT) and Port Address Translation (PAT), it allows for the more efficient use of available IP address space, thereby alleviating the problem of address depletion to a great extent. Subnetting has guidelines regarding the use of the first and the last subnets, known as subnet zero and the all-ones subnet, respectively. This document discusses subnet zero and the all-ones subnet and their uses. </p> 
+   <h2> <a name="prereq">Prerequisites</a> </h2> 
+   <h3> <a name="req">Requirements</a> </h3> 
+   <p>There are no specific requirements for this document.</p> 
+   <h3> <a name="hw">Components Used</a> </h3> 
+   <p>This document is not restricted to specific software and hardware versions.</p> 
+   <h3> <a name="conv">Conventions</a> </h3> 
+   <p>For more information on document conventions, refer to the <a href="https://www.cisco.com/en/US/tech/tk801/tk36/technologies_tech_note09186a0080121ac5.shtml">Cisco Technical Tips Conventions</a>.</p> 
+   <h2> <a name="subnetzero">Subnet Zero</a> </h2> 
+   <p>If a network address is subnetted, the first subnet obtained after subnetting the network address is called subnet zero. </p> 
+   <p>Consider a Class B address, 172.16.0.0. By default the Class B address 172.16.0.0 has 16 bits reserved for representing the host portion, thus allowing 65534 (2<sup>16</sup>-2) valid host addresses. If network 172.16.0.0/16 is subnetted by borrowing three bits from the host portion, eight (2<sup>3</sup>) subnets are obtained. The table below is an example showing the subnets obtained by subnetting the address 172.16.0.0, the resulting subnet mask, the corresponding broadcast addresses, and the range of valid host addresses. </p> 
+   <table bgcolor="#FFFFFF" cellpadding="3" cellspacing="1" border="1" width="60%"> 
+    <tbody>
+     <tr> 
+      <th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> Subnet Address</th> 
+      <th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> Subnet Mask</th> 
+      <th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> Broadcast Address</th> 
+      <th height="" width="" bgcolor="#CCCCFF" colspan="1" rowspan="1"> Valid Host Range</th> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.0.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.31.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.0.1 to 172.16.31.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.32.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.63.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.32.1 to 172.16.63.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.64.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.95.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.64.1 to 172.16.95.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.96.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.127.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.96.1 to 172.16.127.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.128.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.159.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.128.1 to 172.16.159.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.160.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.191.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.160.1 to 172.16.191.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.192.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.223.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.192.1 to 172.16.223.254</td> 
+     </tr> 
+     <tr> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 255.255.224.0</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.255.255</td> 
+      <td height="" width="" bgcolor="#FFFFFF" colspan="1" rowspan="1"> 172.16.224.1 to 172.16.255.254</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p></p> 
+   <p>In the example above, the first subnet (subnet 172.16.0.0/19) is called subnet zero. </p> 
+   <p>The class of the network subnetted and the number of subnets obtained after subnetting have no role in determining subnet zero. It is the first subnet obtained when subnetting the network address. Also, when you write the binary equivalent of the subnet zero address, all the subnet bits (bits 17, 18, and 19 in this case) are zeros. Subnet zero is also known as the all-zeros subnet. </p> 
+   <h2> <a name="theallonesubnet">The All-Ones Subnet</a> </h2> 
+   <p>When a network address is subnetted, the last subnet obtained is called the all-ones subnet. </p> 
+   <p>With reference to the example above, the last subnet obtained when subnetting network 172.16.0.0 (subnet 172.16.224.0/19) is called the all-ones subnet. </p> 
+   <p>The class of the network subnetted and the number of subnets obtained after subnetting have no role in determining the all-ones subnet. Also, when you write the binary equivalent of the subnet zero address, all the subnet bits (bits 17, 18, and 19 in this case) are ones, hence the name. </p> 
+   <h2> <a name="problemswithsubnetzero">Problems with Subnet Zero and the All-Ones Subnet</a> </h2> 
+   <p>Traditionally, it was strongly recommended that subnet zero and the all-ones subnet not be used for addressing. According to <a target="_blank" href="http://www.ietf.org/rfc/rfc950.txt">RFC 950</a> <a href="./Subnet Zero and the All-Ones Subnet - Cisco_files/icon_popup_short.gif" class="show-image-alone" title="Related image, diagram or screenshot."><img alt="leavingcisco.com" height="9" width="19" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/icon_popup_short.gif"></a>, "It is useful to preserve and extend the interpretation of these special (network and broadcast) addresses in subnetted networks. This means the values of all zeros and all ones in the subnet field should not be assigned to actual (physical) subnets." This is the reason why network engineers required to calculate the number of subnets obtained by borrowing three bits would calculate 2<sup>3</sup>-2 (6) and not 2<sup>3</sup> (8). The -2 takes into account that subnet zero and the all-ones subnet are not used traditionally. </p> 
+   <h3> <a name="subnetzero2">Subnet-Zero</a> </h3> 
+   <p>Using subnet zero for addressing was discouraged because of the confusion inherent in having a network and a subnet with indistinguishable addresses. </p> 
+   <p>With reference to our example above, consider the IP address 172.16.1.10. If you calculate the subnet address corresponding to this IP address, the answer you arrive at is subnet 172.16.0.0 (subnet zero). Note that this subnet address is identical to network address 172.16.0.0, which was subnetted in the first place, so whenever you perform subnetting, you get a network and a subnet (subnet zero) with indistinguishable addresses. This was formerly a source of great confusion. </p> 
+   <p>Prior to Cisco IOS® Software Release 12.0, Cisco routers, by default, did not allow an IP address belonging to subnet zero to be configured on an interface. However, if a network engineer working with a Cisco IOS software release older than 12.0 finds it safe to use subnet zero, the <b>ip subnet-zero</b> command in the global configuration mode can be used to overcome this restriction. As of Cisco IOS Software Release 12.0, Cisco routers now have <b>ip subnet-zero</b> enabled by default, but if the network engineer feels that it is unsafe to use subnet zero, the <b>no ip subnet-zero</b> command can be used to restrict the use of subnet zero addresses. </p> 
+   <p>In versions prior to Cisco IOS Software Release 8.3, the <b>service subnet-zero</b> command was used. </p> 
+   <h3> <a name="theallonessubnet">The All-Ones Subnet</a> </h3> 
+   <p>Use of the all-ones subnet for addressing has been discouraged in the past because of the confusion inherent in having a network and a subnet with identical broadcast addresses. </p> 
+   <p>With reference to the example above, the broadcast address for the last subnet (subnet 172.16.224.0/19) is 172.16.255.255, which is identical to the broadcast address of the network 172.16.0.0, which was subnetted in the first place, so whenever you perform subnetting you get a network and a subnet (all-ones subnet) with identical broadcast addresses. In other words, a network engineer could configure the address 172.16.230.1/19 on a router, but if that is done, he can no longer differentiate between a local subnet broadcast (172.16.255.255 (/19)) and the complete Class B broadcast (172.16.255.255(/16)). </p> 
+   <p>Although the all-ones subnet can now be used, misconfigurations can cause problems. To give you an idea of what can happen, consider the following: </p> 
+   <p> <a href="./Subnet Zero and the All-Ones Subnet - Cisco_files/13711-40a.gif" class="show-image-alone" title="Related image, diagram or screenshot."><img alt="40a.gif" border="0" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/13711-40a.gif" usemap=""></a> </p> 
+   <p> <b>Note:&nbsp;</b>See <a href="https://www.cisco.com/warp/customer/701/8.html">Host and Subnet Quantities</a> for details. </p> 
+   <p>Routers 2 through 5 are access routers that each have several incoming asynchronous (or ISDN) connections. We have decided to break up a network (195.1.1.0/24) into four pieces for these incoming users. Each piece is given to one of the access routers. Also, the asynchronous lines are configured <b>ip unnum e0</b>. Router 1 has static routes pointing at the correct access router, and each access router has a default route pointing at Router 1. </p> 
+   <p>The Router 1 routing table looks like this: </p> 
+   <blockquote> 
+    <pre>C  195.1.2.0/24   E0
+      S  195.1.1.0/26   195.1.2.2
+      S  195.1.1.64/26  195.1.2.3
+      S  195.1.1.128/26 195.1.2.4
+      S  195.1.1.192/26 195.1.2.5</pre> 
+   </blockquote> 
+   <p>The access routers have the same connected route for the Ethernet, the same default route and several host routes for their asynchronous lines (courtesy of Point-to-Point Protocol (PPP)). </p> 
+   <blockquote> 
+    <pre>Router 2 routing table:                  Router 3 routing table:                    
+                                                                                
+      C  195.1.2.0/24   E0                       C  195.1.2.0/24   E0           
+      S  0.0.0.0/0      195.1.2.1                S  0.0.0.0/0      195.1.2.1    
+      C  195.1.1.2/32   async1                   C  195.1.1.65/32   async1      
+      C  195.1.1.5/32   async2                   C  195.1.1.68/32   async2      
+      C  195.1.1.8/32   async3                   C  195.1.1.74/32   async3      
+      C  195.1.1.13/32   async4                  C  195.1.1.87/32   async4      
+      C  195.1.1.24/32   async6                  C  195.1.1.88/32   async6      
+      C  195.1.1.31/32   async8                  C  195.1.1.95/32   async8      
+      C  195.1.1.32/32   async12                 C  195.1.1.104/32   async12    
+      C  195.1.1.48/32   async15                 C  195.1.1.112/32   async15    
+      C  195.1.1.62/32   async18                 C  195.1.1.126/32   async18    
+          
+  Router 4 routing table:                  Router 5 routing table:                    
+                                                                               
+      C  195.1.2.0/24   E0                       C  195.1.2.0/24   E0          
+      S  0.0.0.0/0      195.1.2.1                S  0.0.0.0/0      195.1.2.1   
+      C  195.1.1.129/32   async1                 C  195.1.1.193/32   async1    
+      C  195.1.1.132/32   async2                 C  195.1.1.197/32   async2    
+      C  195.1.1.136/32   async3                 C  195.1.1.200/32   async3    
+      C  195.1.1.141/32   async4                 C  195.1.1.205/32   async4    
+      C  195.1.1.152/32   async6                 C  195.1.1.216/32   async6    
+      C  195.1.1.159/32   async8                 C  195.1.1.223/32   async8    
+      C  195.1.1.160/32   async12                C  195.1.1.224/32   async12   
+      C  195.1.1.176/32   async15                C  195.1.1.240/32   async15   
+      C  195.1.1.190/32   async18                C  195.1.1.252/32   async18</pre> 
+   </blockquote> 
+   <p>What if we have misconfigured the hosts on the asynchronous lines to have a 255.255.255.0 mask instead of a 255.255.255.192 mask? Everything works fine. </p> 
+   <p>Take a look at what happens when one of these hosts (195.1.1.24) does a local broadcast (NetBIOS, WINS). The packet looks like this: </p> 
+   <blockquote> 
+    <pre>s: 195.1.1.24 d: 195.1.1.255</pre> 
+   </blockquote> 
+   <p>The packet is received by Router 2. Router 2 sends it to Router 1, which sends it to Router 5, which sends it to Router 1, which sends it to Router 5, and so on, until the Time To Live (TTL) expires. </p> 
+   <p>The following is another example (host 195.1.1.240): </p> 
+   <blockquote> 
+    <pre>s: 195.1.1.240  d: 195.1.1.255</pre> 
+   </blockquote> 
+   <p>This packet is received by Router 5. Router 5 sends it to Router 1, which sends it to Router 5, which sends it to Router 1, which sends it to Router 5, and so on, until the TTL expires. If this situation occurs, you might think you were under a packet attack. Given the load on Router 5, this would not be an unreasonable assumption. </p> 
+   <p>In this example, a routing loop has been created. Because Router 5 is handling the all-ones subnet, it gets blasted. Routers 2 through 4 see the "broadcast" packet only once. Router 1 is hit, too, but what if it is a Cisco 7513, which can handle this situation? In that case, you need to configure your hosts with the correct subnet-mask. </p> 
+   <p>To protect against misconfigured hosts, create a loopback interface on each access router with a static route 195.1.1.255 to the loopback address. You could use the Null0 interface, but this causes the router to generate Internet Control Message Protoco (ICMP) "unreachable" messages. </p> 
+   <h2> <a name="usingsubnetzeroandtheallonessubnet">Using Subnet Zero and the All-Ones Subnet</a> </h2> 
+   <p>It should be noted that even though it was discouraged, the entire address space including subnet zero and the all-ones subnet have always been usable. The use of the all-ones subnet was explicitly allowed and the use of subnet zero is explicitly allowed since Cisco IOS Software Release 12.0. Even prior to Cisco IOS Software Release 12.0, subnet zero could be used by entering the <b>ip subnet-zero</b> global configuration command. </p> 
+   <p>On the issue of using subnet zero and the all-ones subnet, <a target="_blank" href="http://www.ietf.org/rfc/rfc1878.txt">RFC 1878</a> <a href="./Subnet Zero and the All-Ones Subnet - Cisco_files/icon_popup_short.gif" class="show-image-alone" title="Related image, diagram or screenshot."><img alt="leavingcisco.com" height="9" width="19" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/icon_popup_short.gif"></a> states, "This practice (of excluding all-zeros and all-ones subnets) is obsolete. Modern software will be able to utilize all definable networks." Today, the use of subnet zero and the all-ones subnet is generally accepted and most vendors support their use. However, on certain networks, particularly the ones using legacy software, the use of subnet zero and the all-ones subnet can lead to problems. </p> 
+   <h2> <a name="related">Related Information </a> </h2> 
+   <ul> 
+    <li> <b> <a href="https://www.cisco.com/cgi-bin/Support/IpSubnet/home.pl?referring_site=bodynav">IP Subnet Calculator</a> (<font size="-1pt"> <a href="https://tools.cisco.com/RPF/register/register.do">registered</a> customers only</font>) </b> </li> 
+    <li> <b> <a href="https://www.cisco.com/en/US/tech/tk364/tk871/tsd_technology_support_sub-protocol_home.html?referring_site=bodynav">IP Routed Protocols Technical Support Page</a> </b> </li> 
+    <li> <b> <a href="https://www.cisco.com/cisco/web/support/index.html?referring_site=bodynav">Technical Support - Cisco Systems</a> </b> </li> 
+   </ul> 
+   <p xmlns:cal="xalan://java.util.GregorianCalendar"></p> 
+   <p xmlns:cal="xalan://java.util.GregorianCalendar"></p> 
+   <p xmlns:cal="xalan://java.util.GregorianCalendar"></p> 
+   <font xmlns:cal="xalan://java.util.GregorianCalendar" size="-1"> </font> 
+  </div>
+  <!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="/c/dam/en/us/support/docs/common/ie7.css">
+<![endif]--> 
+  <!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="/c/dam/en/us/support/docs/common/ie8.css">
+<![endif]--> 
+  <script type="text/javascript">
+function showfeedback(divid){
+   document.getElementById(divid).style.visibility="visible";
+   document.getElementById(divid).className = "show";
+}function hidefeedback(divid){
+   document.getElementById(divid).style.visibility="hidden";
+   document.getElementById(divid).className = "hide";
+}</script> 
+  <script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/parseXml.js.download"></script> 
+  <script language="JavaScript"> loadjscssfile('/c/dam/en/us/support/docs/common/support-docs.css','css');</script> 
+  <meta http-equiv="X-UA-Compatible" content="IE=9"> 
+  <!-- PIDLMD -->
+  <!-- PIDLMD --> 
+  <script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/dest_pg_metricsrule.js.download"></script>
+  <script type="text/javascript">NTPT_PGEXTRA = 'status=Anonymous';cdc.util.checkLogin(function(val) {if ( val === "valid") {NTPT_PGEXTRA = 'status=LoggedIn';}});</script>  
+ 
+
+
+
+</div>
+
+
+
+<script type="text/javascript">
+   jQuery(document).ready(function() {
+     if (typeof(cdc) == "undefined") cdc={};
+        if (typeof(cdc.eot) == "undefined") cdc.eot={};
+        cdc.eot.isEot = true; 
+        if(cdc.eot.isEot){
+            var linkItemsLen=jQuery("#eot-doc-wrapper link[rel='stylesheet']").length;
+            jQuery("#eot-doc-wrapper link[rel='stylesheet']").each(function(){
+            
+              var linkTag=jQuery(this);
+              var hrefVal=jQuery(linkTag).attr("href");
+              
+              
+              if(hrefVal!=undefined && hrefVal.indexOf("support-responsive.css")==-1 && hrefVal.indexOf("_responsive.css")==-1){
+                  var fileName=hrefVal.substr(hrefVal.lastIndexOf("/")+1,hrefVal.length).split(".css")[0];
+                  var filePath="/etc/designs/cdc/transformation/";
+                  
+                  if(fileName=="ccimr"){
+                      fileName="techdocs_responsive";
+                  }else if(fileName=="support-docs"){
+                      fileName="support-responsive";
+                  }else if(fileName=="framework"){
+                      fileName="responsiveframework";
+                  }else if(fileName=="dcmt"){
+                      fileName="wemdcmt_responsive";
+                  }
+                  else{
+                      fileName+="_responsive";
+                  }
+                  jQuery(linkTag).attr("href",filePath+fileName+".css");
+               }
+               
+	         if(hrefVal.indexOf("support-responsive.css")>-1){
+	             jQuery(linkTag).attr("href","/etc/designs/cdc/transformation/support-responsive.css");
+	         }
+               
+          });
+               jQuery("#eot-doc-wrapper > table").wrap("<div></div>");
+               //jQuery("#eot-doc-wrapper table").parent().attr("style","overflow-x:auto !important");
+               jQuery("#eot-doc-wrapper table").parent().css({overflowX:"auto"});// commented above line coz its overriding existing inline styles
+        } 
+   });    
+</script>
+	
+
+    
+
+
+
+    </div>
+
+      
+   <!--<div class="col third">-->
+        
+            <div class="col narrow-v2" style="overflow:auto;">
+              
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="rightRailComponent">
+
+      <!-- condition for support RR components -->
+
+    
+
+            <!-- TAC image component mandatory -->
+            <div style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="tac-image">
+
+
+    
+    
+    <script type="text/javascript">
+       document.getElementsByClassName('tac-image')[0].parentElement.style.display="none";
+    </script>
+    
+
+
+
+</div>
+
+</div>
+
+            <div class="showComponent">
+                
+
+
+
+
+
+
+
+
+
+
+
+<div class="eot-authors">
+ 
+  <h3 class="eot-authors-heading">Contributed by Cisco Engineers</h3>
+  <ul>
+    
+    
+    
+  </ul>
+</div>
+
+
+
+            </div>
+
+            <!-- mandatory -->
+            <div class="eot-feedback-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="eot-feedback">
+  <h3>Was this Document Helpful?</h3>
+  <span class="eot-feedback-btnwrap">
+    <button class="eot-feedback-btn eot-feedback-btn-yes">Yes</button>
+    <button class="eot-feedback-btn eot-feedback-btn-no">No</button>
+  </span>
+  <span lang="en" class="eot-feedback-olwrap">
+      <a href="javascript: void(0)" class="eot-feedback-ol" onclick="window.open(&#39;https://secure.opinionlab.com/ccc01/o.asp?id=fJgVHPJv&amp;referer=&#39; + location.href + &#39;&amp;resize=false&#39;, &#39;feedback&#39;, &#39;width=550, height=460, scrollbars=1, menubar=1, resizable=1&#39;); return false;">
+    <!--<a href="javascript: void(0)" class="eot-feedback-ol" onclick="window.open('https://secure.opinionlab.com/ccc01/o.asp?id=Cisco_Opinionlab_Id_Support&referer=' + location.href + '&resize=false', 'feedback', 'width=550, height=460, scrollbars=1, menubar=1, resizable=1'); return false;">-->
+      <img id="feedback_img" border="0" style="cursor: pointer;" title="Feedback" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/sm_0000EE_oo1.gif" alt="Feedback">Feedback</a>
+  </span>
+</div>
+
+</div>
+
+            <div class="showComponent" style="display: block;">
+                
+
+
+
+
+
+
+
+
+
+
+
+<div class="eot-vav"><h3>Viewers of This Document Also Viewed</h3>
+  <ul>
+  <li class="vavlistitems-show"><a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html?referring_site=RE&amp;pos=1&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">IP Addressing and Subnetting for New Users</a></li><li class="vavlistitems-show"><a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13790-8.html?referring_site=RE&amp;pos=2&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Host and Subnet Quantities</a></li><li class="vavlistitems-show"><a href="https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html?referring_site=RE&amp;pos=3&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Configuring IP Access Lists</a></li><li class="morelistitems vavlistitems-hide"><a href="https://www.cisco.com/c/pt_br/support/docs/ip/routing-information-protocol-rip/13788-3.html?referring_site=RE&amp;pos=4&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Endereçamento de IP e colocação em sub-rede para novos usuários</a></li><li class="morelistitems vavlistitems-hide"><a href="https://www.cisco.com/c/en/us/td/docs/ios/12_2/ip/configuration/guide/fipr_c/1cfipadr.html?referring_site=RE&amp;pos=5&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Configuring IP Addressing</a></li><li class="morelistitems vavlistitems-hide"><a href="https://www.cisco.com/c/es_mx/support/docs/ip/routing-information-protocol-rip/13788-3.html?referring_site=RE&amp;pos=6&amp;page=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Direccionamiento de IP y conexión en subredes para los usuarios nuevos</a></li><li class="eot-vavButtonListItem"><button class="eot-vavButton anchor">+ <span>Show 3 More</span></button></li></ul>
+</div>
+            </div>
+
+            <div class="showComponent">
+                
+
+
+
+
+
+
+
+
+
+
+<div class="eotLetUsHelp">
+    <h3>Let Us Help</h3>
+    <ul>
+         <li><a id="eotLetUsHelpProdDocUrl" href="https://mycase.cloudapps.cisco.com/start?prodDocUrl=https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html">Open a Support Case</a><img src="./Subnet Zero and the All-Ones Subnet - Cisco_files/icon_lock_small.png" alt="login required"></li>
+        <li>(Requires a <a href="https://www.cisco.com/c/en/us/services/order-services.html">Cisco Service Contract</a>)</li>
+    </ul>
+</div>
+
+
+<script>
+    jQuery(document).ready(function() {
+        var getURL=jQuery("#eotLetUsHelpProdDocUrl").attr("href")+jQuery(location).attr('href');
+		jQuery("#eotLetUsHelpProdDocUrl").attr("href",getURL);
+    });
+</script>
+
+
+            </div>
+
+            <!-- mandatory -->
+            <div id="eotRightRailMBox"><!--MBox-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/mbox.min.js.download"></script>
+
+
+
+
+
+<!-- IT:components/mbox/banner-mbox:V0.0.0 -->
+
+
+
+<div>
+    <div class="mboxDefault mbox-name-en-US_dg_support_eot at-element-marker" style="visibility:visible;"></div><script type="text/javascript">window.ttMETA=(typeof(window.ttMETA)!='undefined')?window.ttMETA:[];window.ttMETA.push({'mbox':'en-US_dg_support_eot','campaign':'','experience':'','offer':''});window.ttMBX=function(x){var mbxList=[];for(i=0;i<ttMETA.length;i++){if(ttMETA[i].mbox==x.getName()){mbxList.push(ttMETA[i])}}return mbxList[x.getId()]}</script>   
+    <script type="text/javascript">
+        var test="";
+        if(test!=undefined && test.trim().length>0){
+           mboxCreate('en-US_dg_support_eot','type=default','');
+        }else{
+           mboxCreate('en-US_dg_support_eot','type=default');
+        }
+       
+    </script>
+</div>
+<!--MBox--></div>
+
+            <div class="showComponent">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript">
+    if (typeof(cdc) == "undefined") cdc={};
+    if (typeof(cdc.rc) == "undefined") cdc.rc={};
+    cdc.rc.concept_name = "Dynamic Address Allocation and Resolution";//storing the primary concept name for use in the JS
+    cdc.rc.locale_info = "en_us";//storing the page locale for use in the JS
+</script>
+
+<div id="eotCommunityDisc">
+    <h3 style="display: block;">Related Support Community Discussions</h3>
+    <div class="discItems"><ul class="open">                             <li><span></span>                                                <div>                            <a href="https://supportforums.cisco.com/t5/security-and-network-management/dynamic-vlan-assignment-and-dhcp/td-p/1637765" class="title"><key>Dynamic</key> VLAN assignment <key>and</key> DHCP</a>                            <p class="modified-date">Last Reply 6 years ago</p>                            <p class="community">in <a href="https://supportforums.cisco.com/t5/security-and-network-management/bd-p/5906-discussions-security-network-mgmt">Security <key>and</key> Network Management</a></p>                        </div>                      </li>                             <li><span></span>                                                <div>                            <a href="https://supportforums.cisco.com/t5/other-network-infrastructure/hsrp-and-ip-helper-address/td-p/2798657" class="title">HSRP <key>and</key> IP Helper <key>Address</key></a>                            <p class="modified-date">Last Reply 1 year ago</p>                            <p class="community">in <a href="https://supportforums.cisco.com/t5/other-network-infrastructure/bd-p/5981-discussions-other-network-infra">Other Network Infrastructure Subjects</a></p>                        </div>                      </li>                             <li><span></span>                                                <div>                            <a href="https://supportforums.cisco.com/t5/lan-switching-and-routing/layer-3-switch-connecting-dhcp-server-and-desktop/td-p/2540866" class="title">Layer 3 switch Connecting DHCP server <key>and</key> Desktop</a>                            <p class="modified-date">Last Reply 3 years ago</p>                            <p class="community">in <a href="https://supportforums.cisco.com/t5/lan-switching-and-routing/bd-p/6016-discussions-lan-switching-routing">LAN, Switching <key>and</key> Routing</a></p>                        </div>                      </li></ul><p class="supportCommunityLink"><a href="https://supportforums.cisco.com/">Cisco Support Community</a></p></div>   
+</div>
+            </div>
+
+            <div class="showComponent">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+	<script type="text/javascript">
+			    var eottdatp = document.getElementsByClassName('eot-tdatp');
+			    if (eottdatp && eottdatp.style) {
+        			eottdatp.style.display="none";
+			    }
+        		  </script>
+  	
+
+
+
+
+            </div>
+
+            <div class="showComponent">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="shortUrlComponent" style="display: none;">
+        <script type="text/javascript">
+        			document.getElementById('shortUrlComponent').style.display="none";
+        		  </script>
+
+        
+    </div>
+    
+
+
+            </div>
+
+        
+            <div class="showClass">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share ">
+    <h3>Share</h3>
+    <ul>
+        
+            <li>
+                <a href="https://twitter.com/share?text=Subnet+Zero+and+the+All-Ones+Subnet+-+Cisco&amp;url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html" class="channels icons-twitter" data-config-metrics-group="responsive share component" data-config-metrics-title="share" data-config-metrics-item="twitter" title="twitter share"></a>
+					
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&amp;title=Subnet+Zero+and+the+All-Ones+Subnet+-+Cisco" class="channels icons-linkedin" data-config-metrics-group="responsive share component" data-config-metrics-title="share" data-config-metrics-item="linkedin" title="linkedin share"></a>
+					
+            </li>
+        
+            <li>
+                <a href="https://www.facebook.com/dialog/share_open_graph?app_id=156494687694418&amp;display=page&amp;action_type=og.likes&amp;action_properties=%7B%22object%22%3A%22https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html%22%7D&amp;redirect_uri=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html" class="channels icons-facebook" data-config-metrics-group="responsive share component" data-config-metrics-title="share" data-config-metrics-item="facebook" title="facebook share"></a>
+					
+            </li>
+        
+            <li>
+                <a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html" class="channels icons-googleplus" data-config-metrics-group="responsive share component" data-config-metrics-title="share" data-config-metrics-item="googleplus" title="googleplus share"></a>
+					
+            </li>
+        
+            <li>
+                <a href="mailto:?subject=Subnet%20Zero%20and%20the%20All-Ones%20Subnet%20-%20Cisco&amp;body=Subnetting%20breaks%20down%20a%20given%20network%20address%20into%20smaller%20subnets.%20Coupled%20with%20other%20technologies%20like%20Network%20Address%20Translation%20(NAT)%20and%20Port%20Address%20Translation%20(PAT)%2C%20it%20allows%20for%20the%20more%20efficient%20use%20of%20available%20IP%20address%20space%2C%20thereby%20alleviating%20the%20problem%20of%20address%20depletion%20to%20a%20great%20extent.%20Subnetting%20has%20guidelines%20regarding%20the%20use%20of%20the%20first%20and%20the%20last%20subnets%2C%20known%20as%20subnet%20zero%20and%20the%20all-ones%20subnet%2C%20respectively.%20This%20document%20discusses%20subnet%20zero%20and%20the%20all-ones%20subnet%20and%20their%20uses.%20%0D%0Ahttps%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html" class="channels icons-email" data-config-metrics-group="responsive share component" data-config-metrics-title="share" data-config-metrics-item="email" title="email share"></a>
+					
+            </li>
+        
+    </ul>
+</div>
+
+<script type="text/javascript">
+    if (typeof cdc === "undefined") cdc={};
+    if (typeof cdc.rc === "undefined") cdc.rc={};
+    if (typeof cdc.rc.share == "undefined") cdc.rc.share={};
+    cdc.rc.share.defaultUrls = {};
+    cdc.rc.share.defaultUrls.TwitterCustom = "//twitter.com/share?text=Subnet+Zero+and+the+All-Ones+Subnet+-+Cisco&url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html";
+    cdc.rc.share.defaultUrls.LinkedinCustom = "//www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&title=Subnet+Zero+and+the+All-Ones+Subnet+-+Cisco"; 
+    cdc.rc.share.defaultUrls.FacebookCustom = "https://www.facebook.com/dialog/share_open_graph?app_id=156494687694418&display=page&action_type=og.likes&action_properties=%7B%22object%22%3A%22https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html%22%7D&redirect_uri=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html"; 
+    cdc.rc.share.defaultUrls.GoogleplusCustom = "https://plus.google.com/share?url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html"; 
+    cdc.rc.share.defaultUrls.EmailCustom = "mailto:?subject=Subnet Zero and the All-Ones Subnet - Cisco&body=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html";
+    // email - cull description from meta tag data
+    if (jQuery('meta[name=description]').length !== 0) {
+        jQuery('.channels.icons-email').each(function() {
+            // if default is the one used, they haven't overwritten it
+            if (cdc.rc.share.defaultUrls.EmailCustom === "mailto:?subject=Subnet Zero and the All-Ones Subnet - Cisco&body=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html") {
+                var email_description = jQuery('meta[name=description]').attr('content') + "\r\n";
+                jQuery(this).attr('href', jQuery(this).attr('href').replace('&body=', '&body=' +  encodeURIComponent(email_description) ));
+            }
+        });
+    };
+</script>
+
+<!-- end - responsive share component -->
+
+
+
+
+
+            </div>
+        
+
+    
+
+
+    
+
+</div>
+
+
+
+    </div>
+    
+</div>
+
+     <!--googleoff: index--><!--googleoff: snippet-->
+    
+
+
+
+
+
+
+
+
+ 
+       
+       <div class="row"><div class="col">   
+       
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+<!-- Responsive Fat Footer -->
+<nav id="fw-fatfooter">
+    <div>
+	    <h4><a href="https://www.cisco.com/c/en/us/solutions/index.html">Information For </a></h4>
+	    <ul>
+			<li><a href="https://www.cisco.com/c/en/us/solutions/small-business.html">Small Business</a></li>
+		    <li><a href="https://www.cisco.com/c/en/us/solutions/midsize/overview.html">Midsize Business</a></li>
+			<li><a href="https://www.cisco.com/c/en/us/solutions/service-provider/index.html">Service Provider</a></li>
+	    </ul>
+		<h4><a href="https://www.cisco.com/c/en/us/solutions/industries.html">Industries</a>
+			<div class="submenu-container">
+				<button class="menu-button" value="Open Industries submenu" title="Open Industries submenu"><span></span></button>
+				<div class="fatfooter-submenu">
+				    <ul>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/automotive.html">Automotive</a></li>
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/consumer-packaged-goods.html">Consumer Packaged Goods</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/education.html">Education</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/energy.html">Energy</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/financial-services.html">Financial Services</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/government.html">Government</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/healthcare.html">Healthcare</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/hospitality.html">Hospitality</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/industrial-solutions.html">Industrial</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/life-sciences.html">Life Sciences</a></li>
+
+				    </ul>
+				    <ul>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/manufacturing.html">Manufacturing</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/materials-mining.html">Materials and Mining</a></li>
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/public-sector.html">Public Sector</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/retail.html">Retail</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/smart-connected-communities.html">Smart+Connected Communities</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/sports-entertainment.html">Sports and Entertainment</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/transportation.html">Transportation</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/industries/workplace-transformation.html">Workplace Transformation</a></li>
+
+				    </ul>
+					<button class="close-button" value="Close submenu" title="Close submenu"><span></span><span></span></button>
+				</div>
+			</div>
+		</h4>
+
+            <h4><a href="https://marketplace.cisco.com/">Marketplace</a></h4>
+
+	    <h4><a href="https://www.cisco.com/cisco/web/siteassets/contacts/index.html">Contacts</a></h4>
+	    <ul>
+			<li><a href="https://www.cisco.com/cisco/web/siteassets/contacts/index.html">Contact Cisco</a></li>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/partner-ecosystem.html">Meet our Partners</a></li>
+<li><a href="https://locatr.cloudapps.cisco.com/WWChannels/LOCATR/openBasicSearch.do">Find a Reseller</a></li>
+
+
+	    </ul>
+    </div>
+
+    <div>
+	    <h4><a href="https://newsroom.cisco.com/">News &amp; Alerts</a></h4>
+	    <ul>
+			<li><a href="https://newsroom.cisco.com/">Newsroom</a></li>
+			<li><a href="https://blogs.cisco.com/">Blogs</a></li>
+			<li><a href="https://www.cisco.com/c/en/us/support/web/tsd-products-field-notice-summary.html">Field Notices</a></li>
+			<li><a href="https://tools.cisco.com/security/center/publicationListing.x">Security Advisories</a></li>
+	    </ul>
+
+	    <h4><a href="https://www.cisco.com/c/en/us/solutions/technology-trends.html">Technology Trends</a></h4>
+	    <ul>
+
+<li><a href="https://www.cisco.com/c/en/us/solutions/cloud/overview.html">Cloud</a></li>
+<li><a href="https://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html">Internet of Things (IoT)</a></li>
+<li><a href="https://www.cisco.com/c/en/us/solutions/software-defined-networking/overview.html">Software Defined Networking (SDN)</a></li>
+
+		</ul>
+    </div>
+
+    <div>
+	    <h4><a href="https://www.cisco.com/c/en/us/support/index.html">Support</a></h4>
+	    <ul>
+			<li><a href="https://software.cisco.com/download/navigator.html?i=!ch">Downloads</a></li>
+			<li><a href="https://www.cisco.com/cisco/web/psa/default.html">Documentation</a></li>
+	    </ul>
+
+	    <h4><a href="https://communities.cisco.com/welcome">Communities</a></h4>
+	    <ul>
+			<li><a href="https://developer.cisco.com/">DevNet</a></li>
+			<li><a href="https://learningnetwork.cisco.com/">Learning Network</a></li>
+			<li><a href="https://supportforums.cisco.com/">Support Community</a></li>
+	    </ul>
+
+		<h4><a href="http://video.cisco.com/">Video Portal</a>
+			<div class="submenu-container">
+				<button class="menu-button" value="Open Video Portal submenu" title="Open Video Portal submenu"><span></span></button>
+				<div class="fatfooter-submenu">
+				    <ul>
+						<li><a href="http://video.cisco.com/#category/videos/certifications" target="_blank">Certifications</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/events" target="_blank">Events</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/industries" target="_blank">Industries</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/inside-cisco" target="_blank">Inside Cisco</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/products" target="_blank">Products</a></li>
+
+
+					 </ul>
+
+				    <ul>
+						<li><a href="http://video.cisco.com/#category/videos/service-provider" target="_blank">Service Provider</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/services" target="_blank">Services</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/technology-trends" target="_blank">Technology Trends</a></li>
+						<li><a href="http://video.cisco.com/#category/videos/techwisetv" target="_blank">TechWiseTV</a></li>
+				    </ul>
+					<button class="close-button" value="Close submenu" title="Close submenu"><span></span><span></span></button>
+				</div>
+			</div>
+		</h4>
+    </div>
+
+    <div>
+	    <h4><a href="https://www.cisco.com/c/en/us/about.html">About Cisco</a></h4>
+	    <ul>
+			<li><a href="https://investor.cisco.com/">Investor Relations</a></li>
+			<li><a href="https://csr.cisco.com/" target="_blank">Corporate Social Responsibility</a></li>
+			<li><a href="https://csr.cisco.com/pages/environment" target="_blank">Environmental Sustainability</a></li>
+			<li><a href="https://www.cisco.com/c/en/us/about/trust-transparency-center/overview.html">Trust and Transparency Center</a></li>
+
+<li><a href="https://www.cisco.com/c/m/en_us/never-better/index.html?CAMPAIGN=NBT-00+NBABT&amp;COUNTRY_SITE=us&amp;POSITION=link&amp;REFERRING_SITE=cisco.com&amp;CREATIVE=fat+footer+nbabt+text">There's Never Been A Better Time</a></li>
+
+	    </ul>
+
+<h4><a href="https://www.cisco.com/c/en/us/about/careers.html">Careers</a></h4>
+<ul>
+<li><a href="https://jobs.cisco.com/jobs?source=Cisco+Jobs+Career+Site&amp;tags=cisco.com+footer" target="_blank">Search Jobs</a></li>
+<li><a href="https://www.cisco.com/c/en/us/about/careers/we-are-cisco.html">We Are Cisco</a></li>
+</ul>
+
+
+
+	    <h4>Programs</h4>
+	    <ul>
+			<li><a href="https://www.cisco.com/c/en/us/support/web/communities/vip.html">Cisco Designated VIP Program</a></li>
+			
+<li><a href="https://www.cisco.com/c/en/us/solutions/cisco-powered/overview.html">Cisco Powered</a></li>
+<li><a href="https://www.cisco.com/c/en/us/buy/cisco-capital-finance/overview.html">Financing Options</a></li>
+
+	    </ul>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<!-- begin: responsive fat footer re-use wrapper-->
+
+ 
+<!-- end: responsive fat footer re-use wrapper-->
+ 
+ 
+       
+       </div></div>   
+       
+ 
+
+<!-- end: responsive fat footer re-use wrapper-->
+      
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="fw-footer" class="container " tabindex="-1" data-owner="ID">
+    <ul>
+        <li><a href="https://www.cisco.com/cisco/web/siteassets/contacts/index.html">Contacts</a></li>
+        <li><a href="https://secure.opinionlab.com/ccc01/o.asp?id=jBjOhqOJ" target="feedback_window">Feedback</a></li>
+        <li><a href="https://www.cisco.com/c/en/us/about/help.html">Help</a></li>
+        <li><a href="https://www.cisco.com/c/en/us/about/sitemap.html">Site Map</a></li>
+        <li><a href="https://www.cisco.com/c/en/us/about/legal/terms-conditions.html">Terms &amp; Conditions</a></li>
+
+        <li>
+            <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html"><span>Privacy</span><span>Privacy Statement</span></a>
+        </li>
+        <li>
+            <a href="https://www.cisco.com/c/en/us/about/legal/privacy-full.html#cookies"> <span>Cookies</span><span>Cookie Policy</span></a>
+        </li>
+        <li><a href="https://www.cisco.com/c/en/us/about/legal/trademarks.html">Trademarks</a></li>
+    </ul>
+</footer>   
+    
+
+
+
+<div id="fw-copyright">© 2017 Cisco and/or its affiliates. All rights reserved.</div>
+    
+
+
+
+
+
+
+
+
+
+<div id="fw-overlay" style="display: none;"></div>  
+
+    
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/responsive.min.js.download"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/eot_metricsrule.js.download" type="text/javascript"></script>
+<script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/eot_ie8logoinsert.js.download" type="text/javascript"></script> 
+<script src="./Subnet Zero and the All-Ones Subnet - Cisco_files/jqmodal.js.download" type="text/javascript"></script>
+    
+    
+
+    <!-- SiteCatalyst code version: H.24.4. -->
+    <noscript>&lt;img src="//cisco.112.2o7.net/b/ss/cisco-mobile/5/12345" width="2" height="2" border="0" alt=""/&gt;</noscript>
+    <!--[if IE 8]></ie><![endif]-->
+
+
+
+
+
+<div><iframe id="cross-domain-iframe" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/xdcLsFrame.html" style="display: none;" __idm_frm__="4712"></iframe></div><iframe name="__bkframe" id="__bkframe" title="bk" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/saved_resource.html" style="border: 0px; width: 0px; height: 0px; display: none; position: absolute; clip: rect(0px 0px 0px 0px);"></iframe><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.23487194443887494"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.08661380939530838" width="0" height="0" alt="" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/0"></div><script type="application/javascript" id="ywa-1510490570686-600808" class="ywa-1000177780039" defer="" src="./Subnet Zero and the All-Ones Subnet - Cisco_files/sp.pl.download"></script><script src="https://dc.ads.linkedin.com/collect/?time=1510490571522&amp;pid=7320&amp;url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&amp;pageUrl=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fmt=js&amp;s=1" type="text/javascript"></script><script src="https://px.ads.linkedin.com/collect/?time=1510490571522&amp;pid=7320&amp;url=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&amp;pageUrl=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Fip%2Fdynamic-address-allocation-resolution%2F13711-40.html&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;fmt=js&amp;s=1" type="text/javascript"></script><div class="z_panel_base z_p_Tracking z_ps_Default" id="pw_ff8081815a8d1ab4015aaec7aadf55d5" style="height: 0px; display: none;"><span><br> </span></div><span></span></body></html>

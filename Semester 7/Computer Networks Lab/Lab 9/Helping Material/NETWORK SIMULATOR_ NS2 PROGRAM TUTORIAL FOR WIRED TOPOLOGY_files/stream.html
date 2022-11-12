@@ -1,0 +1,79 @@
+
+<!-- saved from url=(0032)https://chatroll.com/stream.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+<script type="text/javascript">
+window.onError = null;
+document.domain = (document.domain).replace(/.*live\./g, "");
+parent.Redsea.register(this);
+var streamreq;
+var byteoffset;
+var newdata;
+var interactive;
+
+function newXmlHttp() {
+	var xhr = null;
+	interactive = false;
+	try { xhr = new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {
+		try { xhr = new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {
+			try { xhr = new XMLHttpRequest(); interactive = true; } catch(e) { return false }
+		}
+	}
+	return xhr;
+}
+
+function startstream() {
+	streamreq = newXmlHttp();
+	byteoffset = 0;
+	newdata = "";
+	var url = parent.Redsea.getSubsUrl();
+	streamreq.open("GET", url, true);
+	streamreq.onreadystatechange = function() {
+		if (typeof streamreq == "undefined") return;
+		if (interactive && streamreq.readyState == 3) {
+			extractEvents(streamreq.responseText);
+		} else if (streamreq.readyState == 4) {
+			var ok = (streamreq.status == 200);
+			if (ok) {
+				extractEvents(streamreq.responseText);
+			}
+			delete streamreq;
+			if (ok) {
+				if (parent.Redsea.mode == "longpoll") {
+					setTimeout(startstream, 10);
+				} else {
+					r();
+				}
+			} else {
+				e();
+			}
+		}
+	}
+	streamreq.send(null);
+}
+
+function extractEvents(responsestr) {
+	newdata += responsestr.substring(byteoffset);
+	byteoffset = responsestr.length;
+	while (1) {
+		var x = newdata.indexOf("<s"+"cript>");
+		if (x != -1) {
+			y = newdata.indexOf("</"+"script>", x);
+			if (y != -1) {
+				eval(newdata.substring((x+8),y));
+				if (typeof newdata == 'undefined') break;  // If message was eof() then we're now in a freed script
+				newdata = newdata.substring(y+9);
+			} else {
+				// Last message is incomplete.  Ignore it and it will be processed next time
+				break;
+			}
+		} else {
+			// No more messages
+			break;
+		}
+	}
+}
+
+setTimeout(startstream, 0);
+</script>
+
+</body></html>
